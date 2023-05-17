@@ -1,0 +1,318 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.talkcloud.networkshcool.baselibrary">
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission
+        android:name="android.permission.REBOOT"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 该权限说明该程序可以读取设备外部存储空间（内置SDcard和外置SDCard）的文件 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--允许网络访问权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--允许访问网络状态的权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许修改 WIFI 状态的权限-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--录制音频-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--api1，如：网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 精准定位权限，api1，如：GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- android8.0 安装应用程序 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- bugly -->
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <application>
+
+        <activity
+            android:name=".ui.activities.StartUpActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="behind">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${app_scheme}" />
+            </intent-filter>
+
+        </activity>
+
+
+        <!--        <activity-->
+        <!--            android:name=".ui.activities.CheckPermissionsActivity"-->
+        <!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+        <!--            android:theme="@style/myTransparent2" />-->
+        <!-- 权限检测 -->
+        <activity
+            android:name=".ui.activities.PermissionsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/myTransparent2" />
+
+
+        <activity
+            android:name=".ui.activities.MainMenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="behind"
+            android:launchMode="singleTask" />
+
+        <!-- 登录页 -->
+        <activity
+            android:name=".ui.activities.LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 登录页升级 -->
+        <activity
+            android:name=".ui.activities.LoginPlusActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 验证码登录页 -->
+        <activity
+            android:name=".ui.activities.VCodeInputActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 国家和区域页 -->
+        <activity
+            android:name=".ui.activities.CountryAreaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- 用户名和密码页 -->
+        <activity
+            android:name=".ui.activities.PwdLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 用户名和密码页 -->
+        <activity
+            android:name=".ui.activities.AccountLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 选择身份页 -->
+        <activity
+            android:name=".ui.activities.ChooseIdentityActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- 忘记密码页 -->
+        <activity
+            android:name=".ui.activities.ForgetPwdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 设置新密码页 -->
+        <activity
+            android:name=".ui.activities.SetNewPasswordActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 更换手机号 -->
+        <activity
+            android:name=".ui.activities.ChangeMobileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <!-- 个人设置页 -->
+        <activity
+            android:name=".ui.activities.PersonalSettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- 切换语言界面 -->
+        <activity
+            android:name=".ui.activities.LanguageSwitchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- 用户协议页面 -->
+        <activity
+            android:name=".ui.webview.UserAgreementWebView"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- 作业点评页面 -->
+        <activity
+            android:name=".ui.activities.HomeworkCommentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- 应用内通知列表界面 -->
+        <activity
+            android:name=".ui.activities.NoticeInAppActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- 日历展示课程页面 -->
+        <activity
+            android:name=".ui.activities.CalendarCourseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- 意见反馈 -->
+        <activity
+            android:name=".ui.activities.FeedbackActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/NsWhiteTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 编辑用户资料 -->
+        <activity
+            android:name=".ui.activities.EditUserInfoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/NsWhiteTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 作业详情 -->
+        <activity
+            android:name=".ui.activities.HomeworkDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/NsWhiteTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <!-- 我的课程 -->
+        <activity
+            android:name=".ui.activities.MyCourseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 作业列表 -->
+        <activity
+            android:name=".ui.activities.HomeworkListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <!-- 课程详情 -->
+        <activity
+            android:name=".ui.activities.CourseDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 课程资料列表 -->
+        <activity
+            android:name=".ui.activities.CourseMaterialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 文件查看器 -->
+
+        <!-- 文件查看器webView -->
+        <activity
+            android:name=".ui.activities.BrowserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <!-- 课堂报告-->
+        <activity
+            android:name=".ui.activities.LessonReportlActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 发布作业 -->
+        <activity
+            android:name=".ui.activities.HomeworkPublishActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/NsWhiteTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 写作业 -->
+        <activity
+            android:name=".ui.activities.HomeworkWriteActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/NsWhiteTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 华为、小米 厂商通道 点击通知跳转页面 暂时屏蔽-->
+<!--        <activity-->
+<!--            android:name="com.talkcloud.networkshcool.baselibrary.ui.activities.OpenClickActivity"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                &lt;!&ndash;华为、小米、vivo平台要求&ndash;&gt;-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+
+        <!-- 升级 配置-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调-->
+        <!--since 3.3.0 接收JPush相关事件-->
+        <receiver android:name=".jpush.PushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="${applicationId}"></category>
+            </intent-filter>
+        </receiver>
+
+
+        <!-- since 3.3.0 Required SDK 核心功能-->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <!--User defined.  For test only 继承自cn.jpush.android.service.JCommonService-->
+        <service
+            android:name=".jpush.PushService"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <!--jpush_config_end-->
+
+        <meta-data
+            android:name="APP_LOGO"
+            android:resource="${app_logo}" />
+
+        <meta-data
+            android:name="APP_NAME"
+            android:resource="${app_name}" />
+
+        <meta-data
+            android:name="START_LOGO"
+            android:resource="${start_logo}" />
+
+        <meta-data
+            android:name="APP_SCHEME"
+            android:value="${app_scheme}" />
+    </application>
+
+
+</manifest>

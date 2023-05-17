@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TKCustomColorButton -->
+    <declare-styleable name="TKCustomColorButton">
+        <attr name="ccbPrimaryColor" format="string" />
+        <attr name="ccbPrimaryColorDark" format="string" />
+        <attr name="ccbText" format="string" />
+        <attr name="ccbEnable" format="boolean" />
+    </declare-styleable>
+
+    <!-- HeaderBar -->
+    <declare-styleable name="HeaderBar">
+        <attr name="isShowBack" format="boolean" />
+        <attr name="leftSrc" format="reference" />
+        <attr name="titleText" format="string" />
+        <attr name="isShowRight" format="reference" />
+        <attr name="rightText" format="string" />
+    </declare-styleable>
+
+
+    <!-- TKJobCommonView -->
+    <declare-styleable name="TKJobCommonView">
+        <attr name="isEditable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TKJobCommentView">
+        <attr name="isCommentEditable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TKJobOperateView">
+        <attr name="layoutRes" format="reference" />
+        <attr name="imgNum" format="integer" />
+    </declare-styleable>
+
+    <!-- TKJobCommonView -->
+    <!--    <declare-styleable name="TKJobContentView">-->
+    <!--        <attr name="isContentEditable" format="boolean"/>-->
+    <!--    </declare-styleable>-->
+</resources>

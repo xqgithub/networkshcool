@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appwhite"
+    tools:ignore="MissingDefaultResource,RtlCompat">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_audiorecord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--点评模块-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_comment_title"
+                    android:layout_width="wrap_content"
+                    android:text="@string/homeworkcomment_comment_title"
+                    android:textSize="18dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginStart="80dp"
+                    android:textColor="@color/networkshcool_e1f20"
+                    android:layout_height="wrap_content" />
+
+                <com.talkcloud.networkshcool.baselibrary.weiget.RatingBarView
+                    android:id="@+id/rbv_comment"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_comment_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="37dp"
+                    android:gravity="center"
+                    app:starCount="4"
+                    app:starEmpty="@drawable/comment_littleredflower_unselected"
+                    app:starFill="@drawable/comment_littleredflower_selected"
+                    app:starImageSize="48dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_comment_description"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/rbv_comment"
+                    app:layout_constraintStart_toStartOf="@+id/rbv_comment"
+                    app:layout_constraintEnd_toEndOf="@+id/rbv_comment"
+                    android:text="@string/homeworkcomment_comment_description_failed"
+                    android:layout_marginTop="20dp"
+                    android:textSize="14dp"
+                    android:textColor="@color/networkshcool_e1f20"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:id="@+id/dividingline_horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_comment_description"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:background="#338f92a1"
+                    android:layout_height="1px" />
+
+
+                <com.talkcloud.networkshcool.baselibrary.weiget.EditTextCustomize
+                    android:id="@+id/et_comment_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="66dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dividingline_horizontal"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:textCursorDrawable="@drawable/edit_cursor_color"
+                    android:hint="@string/homeworkcomment_comment_content_hint"
+                    android:inputType="textMultiLine"
+                    android:maxLength="200"
+                    android:maxLines="3"
+                    android:textColor="@color/networkshcool_e1f20"
+                    android:textColorHint="@color/networkshcool_8f92a1"
+                    android:textSize="24dp" />
+
+                <ImageView
+                    android:id="@+id/iv_shortcut"
+                    android:layout_width="20dp"
+                    android:src="@mipmap/login_userprivacyagreement_unselected"
+                    android:visibility="visible"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@+id/et_comment_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_shortcut"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/iv_shortcut"
+                    app:layout_constraintStart_toEndOf="@+id/iv_shortcut"
+                    android:textSize="14dp"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/homeworkcomment_comment_shortcut"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content" />
+
+
+                <HorizontalScrollView
+                    android:id="@+id/mJobMediaScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_shortcut"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:scrollbars="none">
+                    <!-- 媒体区域 -->
+                    <LinearLayout
+                        android:id="@+id/mJobMediaContainerLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:visibility="gone">
+                        <!-- 视频区域 为以后做准备-->
+                        <LinearLayout
+                            android:id="@+id/mJobVideoContainerLl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone" />
+                        <!-- 图片区域 -->
+                        <LinearLayout
+                            android:id="@+id/mJobImageContainerLl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <com.talkcloud.networkshcool.baselibrary.weiget.TKJobAudioView
+                    android:id="@+id/jav_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/mJobMediaScrollView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:visibility="visible" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!--录音模块-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_audiorecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cl_comment">
+
+                <Chronometer
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@color/transparent"
+                    android:layout_marginTop="57dp"
+                    android:text="00:05:32"
+                    android:textSize="16dp"
+                    android:visibility="invisible"
+                    android:textColor="@color/networkshcool_e1f20" />
+
+
+                <com.talkcloud.networkshcool.baselibrary.weiget.CircleProgressbar
+                    android:id="@+id/cp_mic_animation"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_time"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="34dp"
+                    android:layout_width="60dp"
+                    android:visibility="invisible"
+                    android:layout_height="60dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_mic"
+                    app:layout_constraintTop_toTopOf="@+id/cp_mic_animation"
+                    app:layout_constraintStart_toStartOf="@+id/cp_mic_animation"
+                    app:layout_constraintEnd_toEndOf="@+id/cp_mic_animation"
+                    app:layout_constraintBottom_toBottomOf="@+id/cp_mic_animation"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:id="@+id/iv_mic"
+                        android:layout_width="24dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@drawable/ns_mic1"
+                        android:layout_height="36dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_replay"
+                    app:layout_constraintTop_toTopOf="@+id/cl_mic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/cl_mic"
+                    app:layout_constraintEnd_toStartOf="@+id/cl_mic"
+                    android:layout_width="42dp"
+                    android:visibility="gone"
+                    android:layout_height="42dp">
+
+                    <ImageView
+                        android:id="@+id/iv_replay"
+                        android:layout_width="41dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@mipmap/audioreplay_start"
+                        android:layout_height="41dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_carryout"
+                    app:layout_constraintTop_toTopOf="@+id/cl_mic"
+                    app:layout_constraintStart_toEndOf="@+id/cl_mic"
+                    app:layout_constraintBottom_toBottomOf="@+id/cl_mic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:visibility="gone"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp">
+
+                    <ImageView
+                        android:id="@+id/iv_carryout"
+                        android:layout_width="41dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@mipmap/audio_carryout"
+                        android:layout_height="41dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_record_status_prompt"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_mic"
+                    app:layout_constraintStart_toStartOf="@+id/cl_mic"
+                    app:layout_constraintEnd_toEndOf="@+id/cl_mic"
+                    android:text="@string/audiorecord_ready_start"
+                    android:textSize="14dp"
+                    android:textColor="@color/networkshcool_8f92a1"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_myaudio"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/tv_record_status_prompt"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_record_status_prompt"
+                    app:layout_constraintStart_toStartOf="@+id/cl_replay"
+                    app:layout_constraintEnd_toEndOf="@+id/cl_replay"
+                    android:text="@string/audiorecord_myaudio"
+                    android:textSize="12dp"
+                    android:visibility="gone"
+                    android:textColor="@color/networkshcool_8f92a1"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_carryout"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/tv_record_status_prompt"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_record_status_prompt"
+                    app:layout_constraintStart_toStartOf="@+id/cl_carryout"
+                    app:layout_constraintEnd_toEndOf="@+id/cl_carryout"
+                    android:text="@string/audiorecord_carryout"
+                    android:textSize="12dp"
+                    android:visibility="gone"
+                    android:textColor="@color/networkshcool_8f92a1"
+                    android:layout_height="wrap_content" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-- 确定按钮 -->
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                app:layout_constraintTop_toBottomOf="@+id/cl_audiorecord"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_goneMarginTop="179dp"
+                android:layout_marginTop="72dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:textColor="@color/appwhite"
+                android:visibility="invisible"
+                android:textSize="18dp"
+                android:text="@string/homeworkcomment_comment_selecte_hide"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_station"
+                app:layout_constraintTop_toBottomOf="@+id/tv_confirm"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!-- 快捷语和键盘切换模块 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_shortcut_softinputmode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:background="@color/appwhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/dividingline_horizontal2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:background="#338f92a1"
+            android:layout_height="1px" />
+
+        <LinearLayout
+            android:id="@+id/ll_tkjoboperateview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_selecte_hide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_selecte_hide"
+            android:layout_marginStart="30dp">
+            <!-- 图片上传按钮 -->
+            <com.talkcloud.networkshcool.baselibrary.weiget.TKJobOperateView
+                android:id="@+id/mJobOperateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layoutRes="@layout/layout_job_operate_view2"
+                app:imgNum="5" />
+        </LinearLayout>
+
+        <!-- 快捷语切换按钮 -->
+        <ImageView
+            android:id="@+id/iv_shortcut_softinputmode"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintTop_toTopOf="@+id/tv_selecte_hide"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_selecte_hide"
+            app:layout_constraintStart_toEndOf="@+id/ll_tkjoboperateview"
+            android:src="@mipmap/homeworkcomment_shortcut" />
+
+        <TextView
+            android:id="@+id/tv_selecte_hide"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="@string/homeworkcomment_comment_selecte_hide"
+            android:textSize="12dp"
+            android:paddingStart="31dp"
+            android:paddingEnd="31dp"
+            android:gravity="center"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:layout_marginEnd="22dp"
+            android:textColor="@color/appwhite"
+            android:visibility="invisible"
+            android:layout_height="wrap_content" />
+
+        <com.weigan.loopview.LoopView
+            android:id="@+id/loopView"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_selecte_hide"
+            android:layout_marginTop="10dp"
+            android:layout_height="0dp"
+            android:background="#F7F8F9"
+            android:visibility="visible"
+            app:awv_isCurve="true"
+            app:awv_textsize="16"
+            app:awv_isLoop="false" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@mipmap/countryarea_close"
+        android:layout_height="@dimen/dimen_40x" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

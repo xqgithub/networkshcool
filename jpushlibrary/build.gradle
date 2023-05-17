@@ -1,0 +1,162 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.huawei.agconnect'
+
+def cfg = rootProject.ext.android
+
+android {
+    compileSdkVersion cfg.compileSdkVersion
+    buildToolsVersion cfg.buildToolsVersion
+
+    defaultConfig {
+
+
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+
+    buildTypes {
+
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            //极光推送
+//            manifestPlaceholders = [
+//                    JPUSH_PKGNAME : "com.talkcloud.networkshcool",
+//                    JPUSH_APPKEY  : "efe1fee9486a15e2cc89d289", //JPush上注册的包名对应的appkey.
+//                    JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+//
+//                    //xiaomi_config_start
+//                    XIAOMI_APPID  : "MI-小米的APPID",
+//                    XIAOMI_APPKEY : "MI-小米的APPKEY",
+//                    //xiaomi_config_end
+//                    //oppo_config_start
+//                    OPPO_APPKEY   : "OP-oppo的APPKEY",
+//                    OPPO_APPID    : "OP-oppo的APPID",
+//                    OPPO_APPSECRET: "OP-oppo的APPSECRET",
+//                    //oppo_config_end
+//                    //vivo_config_start
+//                    VIVO_APPKEY   : "vivo的APPKEY",
+//                    VIVO_APPID    : "vivo的APPID",
+//                    //vivo_config_end
+//            ]
+
+        }
+        demo {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+
+            //极光推送
+//            manifestPlaceholders = [
+//                    JPUSH_PKGNAME : "com.talkcloud.networkshcool",
+//                    JPUSH_APPKEY  : "efe1fee9486a15e2cc89d289", //JPush上注册的包名对应的appkey.
+//                    JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+//
+//                    //xiaomi_config_start
+//                    XIAOMI_APPID  : "MI-小米的APPID",
+//                    XIAOMI_APPKEY : "MI-小米的APPKEY",
+//                    //xiaomi_config_end
+//                    //oppo_config_start
+//                    OPPO_APPKEY   : "OP-oppo的APPKEY",
+//                    OPPO_APPID    : "OP-oppo的APPID",
+//                    OPPO_APPSECRET: "OP-oppo的APPSECRET",
+//                    //oppo_config_end
+//                    //vivo_config_start
+//                    VIVO_APPKEY   : "vivo的APPKEY",
+//                    VIVO_APPID    : "vivo的APPID",
+//                    //vivo_config_end
+//            ]
+        }
+        pre {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+
+            //极光推送
+//            manifestPlaceholders = [
+//                    JPUSH_PKGNAME : "com.talkcloud.networkshcool",
+//                    JPUSH_APPKEY  : "efe1fee9486a15e2cc89d289", //JPush上注册的包名对应的appkey.
+//                    JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+//
+//                    //xiaomi_config_start
+//                    XIAOMI_APPID  : "MI-小米的APPID",
+//                    XIAOMI_APPKEY : "MI-小米的APPKEY",
+//                    //xiaomi_config_end
+//                    //oppo_config_start
+//                    OPPO_APPKEY   : "OP-oppo的APPKEY",
+//                    OPPO_APPID    : "OP-oppo的APPID",
+//                    OPPO_APPSECRET: "OP-oppo的APPSECRET",
+//                    //oppo_config_end
+//                    //vivo_config_start
+//                    VIVO_APPKEY   : "vivo的APPKEY",
+//                    VIVO_APPID    : "vivo的APPID",
+//                    //vivo_config_end
+//            ]
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+
+            //极光推送
+//            manifestPlaceholders = [
+//                    JPUSH_PKGNAME : "com.talkcloud.networkshcool",
+//                    JPUSH_APPKEY  : "b859237de554b67e71fdf5ac", //JPush上注册的包名对应的appkey.
+//                    JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+//
+//                    //xiaomi_config_start
+//                    XIAOMI_APPID  : "MI-小米的APPID",
+//                    XIAOMI_APPKEY : "MI-小米的APPKEY",
+//                    //xiaomi_config_end
+//                    //oppo_config_start
+//                    OPPO_APPKEY   : "OP-oppo的APPKEY",
+//                    OPPO_APPID    : "OP-oppo的APPID",
+//                    OPPO_APPSECRET: "OP-oppo的APPSECRET",
+//                    //oppo_config_end
+//                    //vivo_config_start
+//                    VIVO_APPKEY   : "vivo的APPKEY",
+//                    VIVO_APPID    : "vivo的APPID",
+//                    //vivo_config_end
+//            ]
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly fileTree(dir: 'libs', include: ["*.aar"])
+
+
+    //huawei_dependencies_start
+    //华为请按照厂商文档配置主 gradle 华为镜像依赖和添加 agconnect-services.json 后再打开此依赖
+//    implementation 'com.huawei.hms:push:5.0.2.300'
+    //huawei_dependencies_end
+
+//    implementation 'com.huawei.agconnect:agconnect-core:1.5.2.300'
+
+    /*** 华为厂商通道配置  ***/
+    implementation 'com.huawei.hms:push:5.3.0.301'
+    //该版本号需要跟jpush-android-4.0.6.jar匹配
+    implementation 'cn.jiguang.sdk.plugin:huawei:4.0.6'
+}
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/mJobContentLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/mJobTitleEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/hw_hint_title"
+            android:maxLength="60"
+            android:textColor="@color/text_main_black_color"
+            android:textColorHint="@color/my_tips_color"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:textSize="20dp" />
+
+        <View
+            android:id="@+id/mJobTitleLineView"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/divider_line_color" />
+
+        <EditText
+            android:id="@+id/mJobContentEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/hw_hint_content"
+            android:maxLength="200"
+            android:minLines="3"
+            android:textColor="@color/text_main_black_color"
+            android:textColorHint="@color/my_tips_color"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:textSize="16dp" />
+
+        <RelativeLayout
+            android:id="@+id/mJobContentLimitRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/mJobContentLimitTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="0/200"
+                android:textColor="@color/my_tips_color"
+                android:textSize="12dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/mJobContentLongEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="@string/hw_hint_s_content"
+        android:maxLength="200"
+        android:minLines="3"
+        android:textColor="@color/text_main_black_color"
+        android:textColorHint="@color/my_tips_color"
+        android:textCursorDrawable="@drawable/edit_cursor_color"
+        android:textSize="16dp"
+        android:visibility="gone" />
+</FrameLayout>
+
+
+
+
+

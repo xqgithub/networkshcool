@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:drawable="@drawable/comment_littleredflower_unselected" />
+    <item
+        android:id="@android:id/secondaryProgress"
+        android:drawable="@drawable/comment_littleredflower_unselected" />
+    <item
+        android:id="@android:id/progress"
+        android:drawable="@drawable/comment_littleredflower_selected" />
+</layer-list>

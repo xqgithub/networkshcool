@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/wv_header_bar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/appwhite">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/ic_back_black" />
+
+        <TextView
+            android:id="@+id/wv_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/file_view"
+            android:textColor="@color/appblack"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/icon_trash_del" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/mPreviewIv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <com.talkcloud.networkshcool.baselibrary.utils.X5WebView
+            android:id="@+id/webview_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.talkcloud.networkshcool.baselibrary.utils.X5WebView>
+
+
+        <com.talkcloud.networkshcool.baselibrary.weiget.TKDocPreView
+            android:id="@+id/mPreviewDocView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.talkcloud.networkshcool.baselibrary.weiget.TKShareBottomView
+        android:id="@+id/mShareBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-25dp"
+        android:visibility="gone" />
+
+</LinearLayout>

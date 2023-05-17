@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+<!--        <external-path-->
+<!--            name="files_root"-->
+<!--            path="com.talkcloud.networkshcool" />-->
+
+        <external-path
+            name="external_storage_root"
+            path="." />
+
+        <external-files-path
+            name="external_file_path"
+            path="/" />
+
+        <!-- QQ 官方分享SDK 共享路径 -->
+        <root-path
+            name="opensdk_root"
+            path="" />
+        <external-files-path
+            name="opensdk_external"
+            path="Images/tmp" />
+        <!-- 友盟微信分享SDK 共享路径-->
+        <external-files-path
+            name="umeng_cache"
+            path="umeng_cache/" />
+        <!-- 新浪微博 官方分享SDK 10.10.0共享路径 -->
+        <external-files-path
+            name="share_files"
+            path="." />
+
+        <!-- <files-path
+             name="files"
+             path="/"/>
+
+         <cache-path
+             name="cache"
+             path="/"/>
+
+         <external-path
+             name="external"
+             path="/"/>
+
+         <external-files-path
+             name="external_file_path"
+             path="/"/>
+
+         <external-cache-path
+             name="external_cache_path"
+             path="/"/>-->
+
+        <!--<external-media-path
+            name="external-media-path"
+            path=""/>-->
+
+
+<!--        <root-path name="root" path="" />-->
+<!--        &lt;!&ndash;代表 context.getFileDir()&ndash;&gt;-->
+<!--        <files-path name="files" path="." />-->
+<!--        &lt;!&ndash;代表 context.getCacheDir()&ndash;&gt;-->
+<!--        <cache-path name="cache" path="." />-->
+<!--        &lt;!&ndash;代表 Environment.getExternalStorageDirectory()&ndash;&gt;-->
+<!--        <external-path name="external" path="." />-->
+<!--        &lt;!&ndash;代表 context.getExternalFilesDirs()&ndash;&gt;-->
+<!--        <external-files-path name="external-files" path="." />-->
+<!--        &lt;!&ndash;代表 getExternalCacheDirs()&ndash;&gt;-->
+<!--        <external-cache-path name="external-cache" path="." />-->
+    </paths>
+</resources>

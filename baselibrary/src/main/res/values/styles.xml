@@ -1,0 +1,175 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item><!-- 第二个页面进入时第一个页面不会出现黑屏 -->
+    </style>
+
+
+    <!--自定义透明背景 1-->
+    <style name="myTransparent">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <!--自定义透明背景 2-->
+    <style name="myTransparent2">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">
+            @android:style/Theme.Translucent.NoTitleBar.Fullscreen
+        </item>
+    </style>
+
+    <!-- 自定义的进度条 -->
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="NsWhiteTheme" parent="Base.Theme.AppCompat.Light">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowAnimationStyle">@style/NSActivityAnimation</item>
+    </style>
+
+    <style name="NSActivityAnimation" parent="@android:style/Animation.Translucent">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_right_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_right_out</item>
+    </style>
+
+    <style name="BottomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置浮于activity以上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 设置背景透明度 0 全透明 1 全不透明-->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_out</item>
+    </style>
+
+    <style name="AnimRight" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/activity_right_in</item>
+        <item name="android:windowExitAnimation">@anim/activity_right_out</item>
+    </style>
+
+    <style name="AnimHold" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/activity_xhold</item>
+        <item name="android:windowExitAnimation">@anim/activity_xhold</item>
+    </style>
+
+    <style name="NoAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@anim/activity_yhold</item>
+    </style>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="corner_radius" format="dimension" />
+        <attr name="leftTop_corner_radius" format="dimension" />
+        <attr name="rightTop_corner_radius" format="dimension" />
+        <attr name="leftBottom_corner_radius" format="dimension" />
+        <attr name="rightBottom_corner_radius" format="dimension" />
+        <attr name="type" format="enum">
+            <enum name="oval" value="2" />
+            <enum name="round" value="1" />
+            <enum name="circle" value="0" />
+        </attr>
+    </declare-styleable>
+
+
+    <!-- 自定义progressbar半径 -->
+    <style name="TKLoadingProgressStyle" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:indeterminateDuration">1000</item>
+        <item name="android:indeterminateDrawable">@drawable/bg_loading_progress</item>
+        <item name="android:minWidth">65dp</item>
+        <item name="android:maxWidth">65dp</item>
+        <item name="android:minHeight">65dp</item>
+        <item name="android:maxHeight">65dp</item>
+    </style>
+
+    <!--自定义dialog透明背景-->
+    <style name="dialog_style" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowBackground">@color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item><!-- 设置是否透明 -->
+        <item name="android:windowSoftInputMode">stateHidden|adjustPan</item>
+        <!--<item name="android:windowAnimationStyle">@style/dialog_animation_style</item>&lt;!&ndash; 进入和退出的动画 &ndash;&gt;-->
+    </style>
+
+
+    <!-- 倒计时控件属性 -->
+    <declare-styleable name="CountDownView">
+        <!--颜色-->
+        <attr name="ringColor" format="color" />
+        <!-- 进度文本的字体大小 -->
+        <attr name="progressTextSize" format="dimension" />
+        <!-- 圆环宽度 -->
+        <attr name="ringWidth" format="float" />
+        <!--进度文本颜色-->
+        <attr name="progressTextColor" format="color" />
+        <!--倒计时-->
+        <attr name="countdownTime" format="integer" />
+    </declare-styleable>
+
+    <!-- 自定义 RatingBarView-->
+    <declare-styleable name="RatingBarView">
+        <attr name="starImageSize" format="dimension" />
+        <attr name="starCount" format="integer" />
+        <attr name="starEmpty" format="reference" />
+        <attr name="starFill" format="reference" />
+        <attr name="starSpace" format="dimension" />
+    </declare-styleable>
+
+
+    <!-- 自定义 EditTextCustomize -->
+    <declare-styleable name="EditTextCustomize">
+        <!-- 显示删除按钮，true 显示，false 不显示（默认） -->
+        <attr name="isShowClearDrawable" format="boolean" />
+        <!-- 删除按钮图片资源 -->
+        <attr name="clearDrawableRes" format="reference" />
+        <!-- 删除按钮图片宽度 -->
+        <attr name="clearDrawableWidth" format="dimension" />
+        <!-- 删除按钮图片高度 -->
+        <attr name="clearDrawableHeight" format="dimension" />
+        <!-- 删除按钮图片距离输入框右边距 -->
+        <attr name="clearDrawablePaddingRight" format="dimension" />
+    </declare-styleable>
+</resources>

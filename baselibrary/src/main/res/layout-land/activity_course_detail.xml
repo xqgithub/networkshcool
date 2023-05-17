@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tk_rel_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ns_color_primary">
+
+    <TextView
+        android:id="@+id/tv_statusbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1x"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_lessonList"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_half_course"
+        android:paddingLeft="5dp"
+        android:paddingTop="52dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toRightOf="@id/left_menu"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_statusbar_top">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/left_menu"
+        android:layout_width="375dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_statusbar_top">
+
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="47dp"
+            android:src="@mipmap/ic_back">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_course_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text=""
+            android:textColor="@color/appwhite"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_course_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text=""
+            android:textColor="@color/bg_gray_a4c3ff"
+            android:textSize="13dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/tv_coursell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/tv_course_time_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/class_time"
+                android:textColor="@color/bg_gray_a4c3ff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_course_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/appwhite"
+                android:textSize="13sp">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/tv_course_teacher_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/class_teacher"
+                android:textColor="@color/bg_gray_a4c3ff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_course_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/appwhite"
+                android:textSize="13sp">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/tv_course_type_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/class_type"
+                android:textColor="@color/bg_gray_a4c3ff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_course_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_roomtype2"
+                android:paddingLeft="6dp"
+                android:paddingTop="3dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/appwhite"
+                android:textSize="10sp">
+
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_course_file"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/shape_course_file"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/course_file"
+            android:textColor="@color/ns_color_primary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

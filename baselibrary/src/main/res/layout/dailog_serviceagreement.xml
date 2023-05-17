@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_dialog"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dimen_30x"
+    tools:ignore="MissingDefaultResource,RtlCompat">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/dimen_30x"
+        android:text="@string/service_and_privacy"
+        android:textSize="22dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/networkshcool_e1f20"
+        android:layout_height="wrap_content" />
+
+    <!-- 协议内容 -->
+    <com.talkcloud.networkshcool.baselibrary.weiget.MaxHeightScrollView
+        android:id="@+id/mhsv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="111"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/service_and_privacy_content2"
+                android:layout_marginTop="20dp"
+                android:textColor="#222222"
+                android:visibility="gone"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_content3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="left"
+                android:textColor="#222222"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:text="@string/service_and_privacy_content3" />
+        </LinearLayout>
+    </com.talkcloud.networkshcool.baselibrary.weiget.MaxHeightScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_no"
+        android:layout_width="@dimen/dimen_150x"
+        app:layout_constraintTop_toBottomOf="@+id/mhsv_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/service_and_privacy_disagree"
+        android:textSize="@dimen/dimen_18x"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toStartOf="@+id/tv_yes"
+        android:textColor="@color/networkshcool_e1f20"
+        android:paddingTop="@dimen/dimen_12x"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dimen_12x"
+        android:layout_marginTop="38dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_yes"
+        android:layout_width="@dimen/dimen_150x"
+        app:layout_constraintTop_toTopOf="@+id/tv_no"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_no"
+        app:layout_constraintStart_toEndOf="@+id/tv_no"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/service_and_privacy_agree"
+        android:gravity="center"
+        android:paddingTop="@dimen/dimen_12x"
+        android:paddingBottom="@dimen/dimen_12x"
+        android:textSize="@dimen/dimen_18x"
+        android:textColor="@color/appwhite"
+        android:layout_height="wrap_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

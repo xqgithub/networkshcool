@@ -1,0 +1,2 @@
+include ':app', ':baselibrary', ':corelibrary', ':jpushlibrary', ':sharelibrary'
+rootProject.name = "networkshcool"

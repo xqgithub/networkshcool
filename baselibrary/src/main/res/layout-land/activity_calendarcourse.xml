@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/networkshcool_f7f8f9"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_calendar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/appwhite"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_statusbar_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1x"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@mipmap/vcodeinput_return"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_statusbar_top" />
+
+
+        <TextView
+            android:id="@+id/tv_month_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/calendarcourse_month_year"
+            android:textColor="@color/networkshcool_e1f20"
+            android:textSize="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_close" />
+
+        <TextView
+            android:id="@+id/tv_backtoday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/calendarcourse_backtotoday"
+            android:textColor="@color/networkshcool_1d6aff"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_month_year"
+            app:layout_constraintTop_toBottomOf="@+id/tv_month_year" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+
+            android:layout_marginEnd="20dp"
+            android:background="@color/networkshcool_8f92a1"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_month_year">
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@mipmap/calendarcourse_next"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:background="@color/networkshcool_8f92a1"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cl_next"
+            app:layout_constraintEnd_toStartOf="@+id/cl_next"
+            app:layout_constraintTop_toTopOf="@+id/cl_next">
+
+            <ImageView
+                android:id="@+id/iv_pre"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@mipmap/calendarcourse_pre"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/appwhite"
+            app:calendar_height="40dp"
+            app:calendar_padding="2dp"
+            app:current_day_text_color="@color/appblack"
+            app:current_month_lunar_text_color="#CFCFCF"
+            app:current_month_text_color="@color/networkshcool_e1f20"
+            app:day_text_size="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_backtoday"
+            app:min_year="2004"
+            app:month_view="com.talkcloud.networkshcool.baselibrary.weiget.calendarview.CustomizeMonthView"
+            app:month_view_scrollable="false"
+            app:other_month_text_color="@color/networkshcool_c0c3c9"
+            app:scheme_text="假"
+            app:scheme_text_color="#333"
+            app:scheme_theme_color="#333"
+            app:selected_text_color="#fff"
+            app:selected_theme_color="#333"
+            app:week_background="@color/full_red"
+            app:week_bar_view="com.talkcloud.networkshcool.baselibrary.weiget.calendarview.CustomizeWeekBarView"
+            app:week_text_color="@color/full_red"
+            app:week_view="com.talkcloud.networkshcool.baselibrary.weiget.calendarview.CustomizeWeekView"
+            app:year_view_day_text_color="#333333"
+            app:year_view_day_text_size="9dp"
+            app:year_view_month_text_color="#ff0000"
+            app:year_view_month_text_size="20dp"
+            app:year_view_scheme_color="#f17706" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_fold"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_fold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/unfold" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_schedule_padback" />
+
+
+    <!-- 准备接入 LessonListFragment -->
+    <FrameLayout
+        android:id="@+id/fl_lessonlistfragment_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_weight="2"
+        android:paddingLeft="5dp"
+        android:paddingRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cl_calendar" />
+
+
+</LinearLayout>

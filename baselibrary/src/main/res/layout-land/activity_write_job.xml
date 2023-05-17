@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.talkcloud.networkshcool.baselibrary.ui.activities.HomeworkWriteActivity">
+
+    <com.talkcloud.networkshcool.baselibrary.weiget.TKHeaderBar
+        android:id="@+id/mHeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="@string/hw_details" />
+
+
+    <LinearLayout
+        android:id="@+id/mWriteContainerLl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:background="@color/bg_gray"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/mLeftRootNsv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:scrollbars="none">
+
+            <com.talkcloud.networkshcool.baselibrary.weiget.TKJobCommonView
+                android:id="@+id/mJobCommonView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:isEditable="false" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1.7"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="18dp">
+
+                        <TextView
+                            android:id="@+id/mWriteTipTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/text_main_black_color"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            tools:text="写作业" />
+
+                        <TextView
+                            android:id="@+id/mWriteDraftTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:enabled="false"
+                            android:text="@string/hw_save_draft"
+                            android:textColor="@color/text_color_headerbar_right"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:id="@+id/mWriteEditLl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hw_rollback_edit"
+                                android:textColor="@color/ns_color_primary"
+                                android:textSize="14dp" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginLeft="4dp"
+                                android:src="@drawable/icon_rollback_edit" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@color/divider_line_color" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.talkcloud.networkshcool.baselibrary.weiget.RoundImageView
+                            android:id="@+id/mWriteHeadImgIv"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/icon_default_head_img" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mWriteUserNameTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_main_black_color"
+                                android:textSize="16dp"
+                                tools:text="李笑笑" />
+
+                            <TextView
+                                android:id="@+id/mWriteTimeTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/my_tips_color"
+                                android:textSize="12dp"
+                                android:visibility="gone"
+                                tools:text="03-21 19:30" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.talkcloud.networkshcool.baselibrary.weiget.TKJobCommonView
+
+                        android:id="@+id/mWriteCommonView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/mWriteCommentTopSpaceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/bg_gray"
+                    android:visibility="gone" />
+
+                <com.talkcloud.networkshcool.baselibrary.weiget.TKJobCommentView
+                    android:id="@+id/mWriteCommentView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:visibility="gone"
+                    app:isCommentEditable="false" />
+
+                <com.talkcloud.networkshcool.baselibrary.weiget.TKCustomColorButton
+                    android:id="@+id/mWriteSubmitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:visibility="gone"
+                    app:ccbText="提交" />
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</LinearLayout>

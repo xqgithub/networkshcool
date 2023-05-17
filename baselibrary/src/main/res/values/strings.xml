@@ -1,0 +1,444 @@
+<resources>
+    <string name="default_locale">CN</string>
+    <string name="default_localecode">86</string>
+    <string name="default_localename">China</string>
+
+    <string name="quit">return</string>
+    <string name="settings">Set up</string>
+    <string name="help">help</string>
+    <string name="string_help_text">The current application lacks necessary permissions.\n\Please click\"Setting\"-\"Authority\"-Open the required permissions.</string>
+    <string name="error_nonetwork">Mobile phone has no internet</string>
+    <string name="prompt_requestfailed">Request failed:</string>
+    <string name="prompt_busynetwork">Busy network:</string>
+
+
+    <!-- 英文是默认语言 其余的语言种类都是扩展包 -->
+    <string name="app_name">Menke</string>
+
+    <string name="schedule">Schedule</string>
+    <string name="coursetitle">Course</string>
+    <string name="clickenter">View shcedule</string>
+    <string name="recentschedule">Recent courses</string>
+    <string name="mine">My profile</string>
+    <string name="setting">Settings</string>
+    <string name="class_countdown">Class start in</string>
+    <string name="enter_class">Enter classroom</string>
+    <string name="tasks">Homework</string>
+    <string name="comment">Report</string>
+    <string name="reply">Replay</string>
+    <string name="class_tips">Big class can only be accessed by PC browser or client</string>
+    <string name="class_teacher">Teacher</string>
+    <string name="class_type">Type</string>
+    <string name="class_time">Time</string>
+    <string name="class_time_dot">Time:</string>
+    <string name="class_teacher_dot">Teacher:</string>
+    <string name="class_process_dot">Progress:</string>
+    <string name="class_nextclass_dot">Next class:</string>
+    <string name="course_file">Course resource package</string>
+    <string name="course_dot">&#183;</string>
+    <string name="course_not_start">Not started yet</string>
+    <string name="course_class">lessons</string>
+    <string name="course_complete">Completed</string>
+    <string name="course_notcomplete">Incomplete</string>
+    <string name="mycourse">My course</string>
+    <string name="course">lessons</string>
+
+    <string name="teacher">Teacher</string>
+
+    <string name="assistantor">Assistant</string>
+    <string name="nocourse">No data</string>
+    <string name="course_doing">In Class</string>
+    <string name="course_comple">Over</string>
+    <string name="course_material">Course resource package</string>
+    <string name="text_not_found">Text not found</string>
+    <string name="view_file">File view：</string>
+    <string name="file_not_exist">File does not exist</string>
+    <string name="file_not_recognized">Unrecognized file</string>
+    <string name="choose_one_activity_to_open">Please select an app to open</string>
+    <string name="file_view">File Preview</string>
+    <string name="class_report">Class report</string>
+    <string name="class_time2">Time：</string>
+    <string name="class_gain_totle">trophies obtained</string>
+    <string name="class_cups_num"></string>
+    <string name="class_minus">Minutes in total</string>
+    <string name="class_inroom">In classroom</string>
+    <string name="class_leave">Leave</string>
+    <string name="class_late">Late</string>
+    <string name="class_early">Leave early</string>
+    <string name="class_time_long">Class time</string>
+    <string name="class_total"></string>
+    <string name="nomatrial">No data</string>
+    <string name="today">Today</string>
+    <string name="hi">Hi</string>
+    <string name="nomoredata">It’s bottom already</string>
+    <string name="datagenerate"> The data is being generated</string>
+    <string name="month">month</string>
+    <string name="day">day</string>
+    <string name="secondsfh">&#8220;</string>
+    <string name="minitefh">&#8216;</string>
+
+    <string name="enterhomework">Enter now</string>
+    <string name="homework">My homework</string>
+    <string name="myhomework">My homework</string>
+    <string name="gotocomplete">Go to complete</string>
+    <string name="gotopublish">Go to post</string>
+    <string name="gotosubmit">Go to submit</string>
+    <string name="draft">Drafts</string>
+    <string name="nocommite">To submit</string>
+    <string name="commited">Submitted</string>
+    <string name="unrate">unrate</string>
+    <string name="rated">rated</string>
+    <string name="edit">edit</string>
+    <string name="publish">Post</string>
+    <string name="homeworkdetail">homeworkdetail</string>
+    <string name="gotorate">Go to review</string>
+    <string name="notify">Bulk notice</string>
+    <string name="nohomeworkcommite">No Homework Commit</string>
+    <string name="nodata">No data</string>
+    <string name="delete">delete</string>
+    <string name="excellent">Excellent</string>
+    <string name="good">Good</string>
+    <string name="secondary">Satisfactory</string>
+    <string name="flunk">Fail</string>
+    <string name="homework_complete">Done</string>
+    <string name="homework_notcomplete">To do</string>
+    <string name="people_submitted">people have submitted</string>
+    <string name="expired">Expired</string>
+    <string name="nofity_sucuess">Notify successful</string>
+    <string name="review_homework">Review homework</string>
+    <string name="pub_homework">Publish homework</string>
+    <string name="home">Home</string>
+
+
+    <string name="login_title">Welcome to %s!</string>
+    <string name="login_title2">Login to your account</string>
+    <string name="login_phonename">Phone number</string>
+    <string name="login_phonecountrycode">+86</string>
+    <string name="login_et_phone_hint">Phone number</string>
+    <string name="login_confirm">Next step</string>
+    <string name="login_title_ps">Verify identity</string>
+    <string name="login_title2_ps">You could verify by password if your phone is not available</string>
+    <string name="login_confirm_ps">Send verification code</string>
+    <string name="login_usepwd_ps">Use password</string>
+    <string name="login_userprivacyagreement">Have read and agree</string>
+    <string name="login_userprivacyagreement2">&#160;\"User Agreement\" and \"Privacy Policy\"</string>
+    <string name="login_userprivacyagreement3">Agree to the agreement below to continue logging in</string>
+    <string name="vcodeinput_title">Enter authentication code</string>
+    <string name="vcodeinput_title2">Authentication code is sent to</string>
+    <string name="vcodeinput_resend">Send again in %s second</string>
+    <string name="vcodeinput_resend2">Authentication code is not received?</string>
+    <string name="vcodeinput_resend3">Send again</string>
+    <string name="countryarea_title">Choose country/region</string>
+    <string name="countryarea_currentcountryarea">Current country/region</string>
+    <string name="countryarea_currentcountryname">China</string>
+    <string name="countryarea_othercountryarea">Other country/region</string>
+    <string name="pwdlogin_title">Login password</string>
+    <string name="pwdlogin_title2">Login to your account</string>
+    <string name="pwdlogin_et_pwd_hint">Enter password</string>
+    <string name="pwdlogin_pwd_name">Password</string>
+    <string name="pwdlogin_forgetpwd">Forget password</string>
+    <string name="pwdlogin_confirm">Login</string>
+    <string name="pwdlogin_confirming">Logging in</string>
+    <string name="pwdlogin_title2_ps">You can verify by SMS verification code if you forget your password</string>
+    <string name="pwdlogin_useverificationcode_ps">Use SMS verification code</string>
+    <string name="chooseidentity_title">Choose your identification</string>
+    <string name="chooseidentity_title2">Your identification could be changed in “my profile</string>
+    <string name="chooseidentity_teacher">Teacher</string>
+    <string name="chooseidentity_student">Student</string>
+    <string name="chooseidentity_confirm">Confirm</string>
+    <string name="forgetpwd_title">Forget password</string>
+    <string name="forgetpwd_title2">Verify with phone number</string>
+    <string name="setnewpassword_title">Set New Password</string>
+    <string name="setnewpassword_title2">Password consists of 8-20 words or numbers</string>
+    <string name="setnewpassword_pwd">Password</string>
+    <string name="setnewpassword_pwd_confirm">Confirm password</string>
+    <string name="setnewpassword_pwd_confirm_hint">Enter password</string>
+    <string name="setnewpassword_title_ps">Change Password</string>
+    <string name="personalsettings_title">Personal settings</string>
+    <string name="personalsettings_changemobile">Change mobile</string>
+    <string name="personalsettings_changepassword">Change password</string>
+    <string name="personalsettings_language">Language</string>
+    <string name="personalsettings_languagetype">Follow system</string>
+    <string name="personalsettings_eyeprotection">Eye protection mode</string>
+    <string name="personalsettings_useragreement">User agreement</string>
+    <string name="personalsettings_privacypolicy">Privacy Policy</string>
+    <string name="personalsettings_version">Version number</string>
+    <string name="personalsettings_versionpromp">The latest version</string>
+    <string name="personalsettings_versionpromp_canbeupdated">new version</string>
+    <string name="personalsettings_dropout">Logout</string>
+    <string name="changemobile_title">Change phone number</string>
+    <string name="changemobile_phonename">New phone number</string>
+    <string name="changemobile_confirm">Next step</string>
+    <string name="languageswitch_title">Switch language</string>
+    <string name="useragreement_title">User agreement</string>
+    <string name="calendarcourse_month_year">April 2021</string>
+    <string name="calendarcourse_backtotoday">Back to today</string>
+    <string name="logout_title">Warm tip</string>
+    <string name="logout_content">You sure you want to quit?</string>
+    <string name="logout_no">Cancel</string>
+    <string name="logout_yes">Confirm</string>
+    <string name="languageswitch_namedescription">System</string>
+    <string name="language_name_default">Follow system</string>
+    <string name="language_name_zh_cn">Simplified Chinese</string>
+    <string name="language_name_zh_tw">Traditional Chinese</string>
+    <string name="language_name_en">English</string>
+    <string name="updateapp_title">Upgrade Reminder</string>
+    <string name="updateapp_conten">Ready to start updating the App%s，Confirm upgrade？</string>
+    <string name="audiorecord_ready_start">Click to start recording</string>
+    <string name="audiorecord_ready_end">Click to stop recording</string>
+    <string name="audiorecord_ready_again">Restart to record</string>
+    <string name="audiorecord_myaudio">My records</string>
+    <string name="audiorecord_carryout">Complete</string>
+    <string name="audiorecord_title">Save the recording file</string>
+    <string name="audiorecord_content">The record has been generated. Save it now?</string>
+    <string name="homeworkcomment_title">Comments</string>
+    <string name="homeworkcomment_gotoreview">Reviews</string>
+    <string name="homeworkcomment_reviewed">Reviewed</string>
+    <string name="homeworkcomment_comment_title">Review %s\'s</string>
+    <string name="homeworkcomment_comment_description_excellent">Excellent+3</string>
+    <string name="homeworkcomment_comment_description_good">Good+2</string>
+    <string name="homeworkcomment_comment_description_medium">Satisfactory+1</string>
+    <string name="homeworkcomment_comment_description_failed">Fail</string>
+    <string name="homeworkcomment_comment_content_hint">Please comment here</string>
+    <string name="homeworkcomment_comment_shortcut">Save as common comments</string>
+    <string name="homeworkcomment_comment_selecte_hide">Confirm</string>
+    <string name="homeworkcomment_student_homework">Student Homework</string>
+    <string name="accountlogin_title">Account login</string>
+    <string name="accountlogin_title2">Login to your account</string>
+    <string name="accountlogin_name">account</string>
+    <string name="accountlogin_et_account_hint">Enter account</string>
+    <string name="login_useaccount">Login account</string>
+    <string name="login_usepwd">Login password</string>
+    <string name="pwdlogin_useverificationcode">Login with verification code</string>
+    <string name="networkdisk_title">Enterprise drive</string>
+    <string name="networkdisk_et_search_hint">Search</string>
+    <string name="networkdisk_morequantity">You can only select %s network disk resources at most</string>
+    <string name="networkdisk_confirm">Confirm (%s/%s)</string>
+    <string name="networkdisk_historyrecord_title_name">Search hisotry</string>
+    <string name="versionupdate_title">New version</string>
+    <string name="versionupdate_updateimmediately">update immediately</string>
+    <string name="versionupdate_content">The new version of %s is coming！\nFurther optimize the user experience and improve APP performance！</string>
+    <string name="homeworklist_delete_work">Delete Homework %s ?</string>
+    <string name="homeworkcomment_delete">Are you sure you want to delete assignment comments?</string>
+    <string name="networkdisk_file_status">In the line</string>
+    <string name="networkdisk_file_status2">Conversion failed</string>
+    <string name="networkdisk_file_status3">Converting</string>
+
+    <!-- 错误提示 -->
+    <string name="login_failed">Login failed</string>
+    <string name="phone_regex_error">Incorrect phone format</string>
+    <string name="phone_is_same">The new phone number cannot be the same as the original phone number</string>
+    <string name="setnewpassword_pwd_error">New password cannot be empty</string>
+    <string name="setnewpassword_pwd_confirm_error">Confirm password can not be blank</string>
+    <string name="setnewpassword_pwd_different_error">The new password and the confirmed password must be the same</string>
+    <string name="setnewpassword_pwd_is_8_digits">Please enter at least 8 characters of password</string>
+    <string name="phone_unregistered">Phone number is not registered</string>
+    <string name="updateapp_failure">Update failed</string>
+    <string name="download_progress">Download progress:</string>
+    <string name="token_is_error">token is Expired, please log in again to use!</string>
+    <string name="Verification_code_sended">The verification code has been sent，Please %s seconds Retry</string>
+    <string name="phone_does_not_exist">Phone number has not been registered</string>
+    <string name="phone_does_exist">Phone number has been registered</string>
+    <string name="eyeprotection_content">To turn on the eye protection mode, you need to open the floating frame permission in the settings, please go to the settings to enable</string>
+    <string name="eyeprotection_yes">Set up now</string>
+    <string name="phone_version_is_low">Your phone version is relatively low, this function is temporarily unavailable</string>
+    <string name="lack_of_write_access">Your phone lacks write permission, please turn it on before recording</string>
+    <string name="lack_of_recorded_audio">Your phone lacks permission to record audio, please turn it on before recording</string>
+    <string name="audio_play_fail">Play failed</string>
+    <string name="audio_num_max">Up to 3 voice files, please delete and record</string>
+    <string name="toast_double_exit">Press again to exit the program</string>
+    <string name="emptydata_text">No data</string>
+    <string name="data_wrong">Data error</string>
+
+    <!-- 周文字 -->
+    <string-array name="weekarray">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+    <!-- 月文字 -->
+    <string-array name="montharray">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+
+    <!-- 意见反馈 -->
+    <string name="feedback_title">Feedback</string>
+    <string name="feedback_label_title">Category mark</string>
+    <string name="feedback_label1">Malfunctions</string>
+    <string name="feedback_label2">Experience issue</string>
+    <string name="feedback_label3">Function suggestion</string>
+    <string name="feedback_label4">Other</string>
+    <string name="feedback_img_question">Question picture (optional)</string>
+    <string name="feedback_hint_text">Please enter your opinion (compulsory)</string>
+    <string name="feedback_submit">Submit</string>
+
+    <string name="buttonAlbumTitle">Album</string>
+    <string name="buttonTakePhotoTitle">Take photo</string>
+    <string name="buttonCancel">Cancel</string>
+
+    <!-- 我的 -->
+    <string name="profilePrizeTitle">Trophy</string>
+    <string name="profileGetPrizeTitle">Get the trophy</string>
+    <string name="profileRedFlowerTitle">Red flower</string>
+
+    <string name="profileMenuCourses">My course</string>
+    <string name="ProfileMenuFeedback">Feedback</string>
+    <string name="profileMenuIdentity">Switch identity</string>
+    <string name="teacher_title">Teacher</string>
+    <string name="student_title">Student</string>
+
+    <!-- 编辑资料 -->
+    <string name="editProfile">Edit profile</string>
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+    <string name="edit_name_empty_desc">Name cannot be blank, please input name and submit again</string>
+
+    <!-- Loading弹窗 -->
+    <string name="loading">Just a moment, please</string>
+    <string name="submitSuccess">Submit successful</string>
+    <string name="submitFail">Submit failed</string>
+    <string name="back">Return</string>
+    <string name="feedbackConfirmMsg">Thank you for your opinion</string>
+
+    <!-- 录制件生成中 -->
+    <string name="join_playback_room_desc">Replay is generating, please try again later~</string>
+    <string name="join_playback_list_title">Replay list</string>
+
+
+    <!-- 作业详情 发作业 -->
+    <string name="hw_hint_title">Title of assignment</string>
+    <string name="hw_hint_content">Please enter the requirements of assignment ( within 200 words)</string>
+    <string name="hw_hint_s_content">Please input here ( within 200 words)</string>
+    <string name="hw_camera">Camera</string>
+    <string name="hw_video">Video</string>
+    <string name="hw_audio">Audio</string>
+    <string name="hw_file">File</string>
+    <string name="hw_drive">Drive</string>
+    <string name="hw_submit_way">Submission methods</string>
+    <string-array name="hw_submit_way_arr">
+        <item>Unlimited</item>
+        <item>Picture</item>
+        <item>Video</item>
+        <item>Sound record</item>
+    </string-array>
+    <string name="hw_submit_desc">Limitation: 9 pictures; 3 videos within 5 minutes; 3 audios within 10 minutes; 3 Word, PPT or PDF</string>
+    <string name="hw_save_draft">Save drafts</string>
+    <string name="hw_attachment">Attachment(%1$s)</string>
+    <string name="hw_fold">Fold</string>
+    <string name="hw_unfold">Unfold</string>
+    <string name="hw_audio_limit">Up to 3 audio</string>
+    <string name="hw_img_limit">Up to 9 pictures</string>
+    <string name="hw_video_limit">Up to 3 videos</string>
+    <string name="hw_must_desc">Please enter the job requirements or content</string>
+
+    <string name="hw_rollback_edit">Recall and edit</string>
+
+    <!-- 相机选择弹窗 -->
+    <string-array name="hw_camera_arr">
+        <item>Album</item>
+        <item>Take photo</item>
+    </string-array>
+    <string-array name="hw_video_arr">
+        <item>Album</item>
+        <item>Videotape</item>
+    </string-array>
+
+    <!-- 学生写作业作业详情 -->
+    <string name="hw_details">Details</string>
+    <string name="hw_write">Complete assignment</string>
+    <string name="hw_feedback">Teacher\'s feedback</string>
+
+    <!-- 学生没有作业提示 -->
+    <string name="hw_s_nohomework_tip">The teacher has not arranged homework yet</string>
+
+    <!-- 开启通知 -->
+    <string name="notify_permission_title">It is detected that the notification permission is not turned on</string>
+    <string name="notify_permission_content">If you do not open this permission, you may not receive job related notifications ～</string>
+    <string name="notify_permission_btn_open">To open</string>
+
+
+    <!-- 用户协议 和 隐私政策 -->
+    <string name="protocol_useragreement_url">https://doccdncf.talk-cloud.net/static/Agreement/%s/registration-user-en.html</string>
+    <string name="protocol_userprivacypolicy_url">https://doccdncf.talk-cloud.net/static/Agreement/%s/registration-privacy-en.html</string>
+    <string name="service_and_privacy">Service agreement and privacy policy</string>
+    <string name="service_and_privacy_content">Welcome to use %s! We attach great importance to the protection of your personal information and privacy, and we especially remind you to read and fully understand the terms of the \"User Agreement\" and \"Privacy Policy\".If you agree to the "User Agreement" and "Privacy Policy", please click "Agree" to start using our products and services, and we will do our best to protect the security of your personal information.</string>
+    <string name="service_and_privacy_content2">In order to provide you with a one-click sharing service, our product integrates UMeng + U-Share SDK. UMeng + SDK needs to collect the Mac address of your device, unique device identification code (IMEI/android ID/IDFA/OPENUDID/GUID, SIM Card, and IMSI information), and the public information of the social account you need to share for completing the one-click sharing service.We also calibrate the data accuracy of the report through the geographic location and provide basic anti-cheating services.For your information security, we have entered into data security and confidentiality agreements with third-party SDK service providers, and these companies will strictly abide by our data privacy and security requirements. Unless with your consent, we will not share your personally identifiable information with them. In order for you to better understand the types and uses of data collected by [UMeng+], and how to protect your personal information, you can log in to https://www.umeng.com/policy to understand the [UMeng+] privacy policy .</string>
+    <string name="service_and_privacy_content3">You need to agree to the "User Agreement" and "Privacy Agreement" to continue using our App～</string>
+    <string name="service_and_privacy_agree">Agree</string>
+    <string name="service_and_privacy_agree2">To agree</string>
+    <string name="service_and_privacy_disagree">Disagree</string>
+    <string name="service_and_privacy_disagree2">Quit</string>
+
+    <string name="loginplus_phone_login">Phone login</string>
+    <string name="lesson_preparation">Preparation</string>
+    <string name="lesson_preview">Preview</string>
+    <string name="lesson_preview_preparation_no_data">You haven\'t uploaded any %s files yet</string>
+    <string name="noticeinapp_title">Notification</string>
+    <string name="noticeinapp_createtime_rule6">%s-%s-%s</string>
+    <string name="noticeinapp_createtime_rule5">%s-%s</string>
+    <string name="noticeinapp_createtime_rule4_1">%s:%s Yesterday </string>
+    <!--    <string name="noticeinapp_createtime_rule4_2">前天%s时%s分</string>-->
+    <string name="noticeinapp_createtime_rule3">%s:%s Today</string>
+    <string name="noticeinapp_createtime_rule2">%s minutes ago</string>
+    <string name="noticeinapp_createtime_rule1">Just now</string>
+    <string name="student_age">year</string>
+    <string name="no_data">No data</string>
+    <string name="student_list_remind">Remind</string>
+    <string name="student_list_reminded">Reminded</string>
+    <string name="networkdisk_pics_selected_max">You can only select up to %s pictures</string>
+    <string name="networkdisk_videos_selected_max">You can select up to %s videos</string>
+    <string name="networkdisk_audios_selected_max">You can only select up to %s audios</string>
+    <string name="networkdisk_files_selected_max">You can only select a maximum of %s file types</string>
+
+
+    <!-- 分享相关 -->
+    <string name="share_wx_title">WeChat</string>
+    <string name="share_dd_title">DingTalk</string>
+    <string name="share_download_title">Download</string>
+    <string name="share_downloading">Downloading...</string>
+    <string name="share_open_title">Open</string>
+    <string name="share_print_title">Print</string>
+    <string name="share_text">Share</string>
+    <string name="share_enclosure_text">Enclosure</string>
+    <string name="share_desc_text">Click here to view the attachment</string>
+    <string name="share_save_desc_text">Unable to obtain storage permission. Please open it in settings</string>
+    <string name="share_install_desc">You haven\'t installed %s yet. Please try again after installing</string>
+
+    <!-- 文件大小 -->
+    <string name="file_size_txt">File size: %s</string>
+
+    <string name="select_student_title">Select students</string>
+    <string name="select_student_all">All</string>
+
+    <!-- 注销账号 -->
+    <string name="unregister">Unregister account</string>
+    <string name="unregister_title">Are you sure you want to unregister</string>
+    <string name="unregister_yes">Confirm</string>
+    <string name="unregister_no">Not yet</string>
+    <string name="unregister_result">Risk of deleting your account</string>
+    <string name="unregister_result1">Fail to Login</string>
+    <string name="unregister_result2">Once the account has been deleted, you cannot login Talk-Cloud Online School or related platforms with it any longer.</string>
+    <string name="unregister_result3">Clear all Information Irretrievably</string>
+    <string name="unregister_result4">After cancelling the account, all information will be wiped, including but not limited to personal profile, notifications, courses and recordings.</string>
+    <string name="unregister_result5">Call %s to contact with support team for deleting your account.</string>
+
+    <string name="unregister_pad_desc">Please use your mobile phone to dial %s, contact customer service</string>
+
+
+</resources>

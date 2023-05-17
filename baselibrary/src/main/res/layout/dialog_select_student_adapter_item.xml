@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <com.talkcloud.networkshcool.baselibrary.weiget.RoundImageView
+        android:id="@+id/mUserHeaderIv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        tools:src="@drawable/icon_default_head_img" />
+
+    <TextView
+        android:id="@+id/mUserNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_toRightOf="@+id/mUserHeaderIv"
+        android:textColor="@color/text_main_black_color"
+        android:textSize="16dp"
+        tools:text="多安" />
+
+
+    <ImageView
+        android:id="@+id/mUserSelectIv"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/cb_select_unchecked" />
+
+    <CheckBox
+        android:id="@+id/mUserSelectCb"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/cb_select_student_selector"
+        android:button="@null"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    tools:ignore="MissingDefaultResource,RtlCompat">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:id="@+id/tv_file_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon"
+        app:layout_constraintBottom_toTopOf="@+id/tv_file_size"
+        app:layout_constraintEnd_toStartOf="@+id/iv_selected"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.5"
+        android:text="第三单课后练习题"
+        android:textSize="17dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/networkshcool_e1f20" />
+
+    <TextView
+        android:id="@+id/tv_file_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_file_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_file_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="2dp"
+        android:text="320KB"
+        android:textSize="12dp"
+        android:textColor="@color/networkshcool_8f92a1" />
+
+    <ImageView
+        android:id="@+id/iv_selected"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@mipmap/login_userprivacyagreement_unselected"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp" />
+
+
+    <ImageView
+        android:id="@+id/iv_arrowright"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@mipmap/networkdisk_arrowright"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"
+        android:visibility="gone" />
+
+
+    <View
+        android:id="@+id/dividingline_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comment_description"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@+id/iv_icon"
+        app:layout_constraintEnd_toEndOf="@+id/iv_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#338f92a1"
+        android:layout_height="1px" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,441 @@
+<resources>
+    <string name="default_locale">CN</string>
+    <string name="default_localecode">86</string>
+    <string name="default_localename">中國</string>
+
+    <string name="quit">返回</string>
+    <string name="settings">設置</string>
+    <string name="help">幫助</string>
+    <string name="string_help_text">當前應用缺少必要權限。 \n\n請點擊\"設置\"-\"權限\"-打開所需權限。</string>
+    <string name="error_nonetwork">手機無網絡</string>
+    <string name="prompt_requestfailed">請求失敗:</string>
+    <string name="prompt_busynetwork">網絡繁忙:</string>
+
+    <!-- 英文是默认语言 其余的语言种类都是扩展包 -->
+    <string name="app_name">門課</string>
+
+    <string name="schedule">課程表</string>
+    <string name="coursetitle">課程</string>
+    <string name="clickenter">查看課程表</string>
+    <string name="recentschedule">近期課程</string>
+    <string name="mine">我的</string>
+    <string name="setting">設定</string>
+    <string name="class_countdown">距離開課</string>
+    <string name="enter_class">去上課</string>
+    <string name="tasks">作業</string>
+    <string name="comment">報告</string>
+    <string name="reply">重播</string>
+    <string name="class_tips">大班課僅限PC瀏覽器和用戶端使用</string>
+    <string name="class_teacher">教師</string>
+    <string name="class_type">類型</string>
+    <string name="class_time">時間</string>
+    <string name="class_time_dot">時間:</string>
+    <string name="class_teacher_dot">老師:</string>
+    <string name="class_process_dot">進度:</string>
+    <string name="class_nextclass_dot">下次課:</string>
+    <string name="course_file">課程資料包</string>
+    <string name="course_dot">&#183;</string>
+    <string name="course_not_start">未开課</string>
+    <string name="course_class">節課</string>
+    <string name="course_complete">已完成</string>
+    <string name="course_notcomplete">未完成</string>
+    <string name="mycourse">我的課程</string>
+    <string name="course">課</string>
+
+    <string name="teacher">主講</string>
+
+    <string name="assistantor">助教</string>
+    <string name="nocourse">暫無數據</string>
+    <string name="course_doing">上課中</string>
+    <string name="course_comple">已結束</string>
+    <string name="course_material">課程資料包</string>
+    <string name="text_not_found">文件沒有找到</string>
+    <string name="view_file">查看文件：</string>
+    <string name="file_not_exist">文件不存在</string>
+    <string name="file_not_recognized">無法識別文件</string>
+    <string name="choose_one_activity_to_open">請選擇一個應用打開</string>
+    <string name="file_view">文件預覽</string>
+    <string name="class_report">課堂報告</string>
+    <string name="class_time2">課節時間</string>
+    <string name="class_gain_totle">共獲得</string>
+    <string name="class_cups_num">個獎杯</string>
+    <string name="class_minus">分鐘</string>
+    <string name="class_inroom">在教室</string>
+    <string name="class_leave">離開</string>
+    <string name="class_late">遲到</string>
+    <string name="class_early">早退</string>
+    <string name="class_time_long">聽課時長</string>
+    <string name="class_total">共</string>
+    <string name="nomatrial">暫無數據</string>
+    <string name="today">今天</string>
+    <string name="hi">Hi</string>
+    <string name="nomoredata">已經到底了哦～</string>
+    <string name="datagenerate">資料正在生成中</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="toast_double_exit">再按一次退出程序</string>
+
+    <string name="enterhomework">立即進入</string>
+    <string name="homework">我的功課</string>
+    <string name="myhomework">我的功課</string>
+    <string name="gotocomplete">去完成</string>
+    <string name="gotopublish">去發佈</string>
+    <string name="gotosubmit">去提交</string>
+    <string name="draft">草稿</string>
+    <string name="nocommite">未提交</string>
+    <string name="commited">已提交</string>
+    <string name="unrate">待點評</string>
+    <string name="rated">已批閱</string>
+    <string name="edit">編輯</string>
+    <string name="publish">發佈</string>
+    <string name="homeworkdetail">作業詳情</string>
+    <string name="gotorate">去點評</string>
+    <string name="notify">批量提醒</string>
+    <string name="nohomeworkcommite">沒有作業提交</string>
+    <string name="nodata">沒有數據</string>
+    <string name="delete">刪除</string>
+    <string name="excellent">優秀</string>
+    <string name="good">良好</string>
+    <string name="secondary">中等</string>
+    <string name="flunk">不及格</string>
+    <string name="homework_complete">已完成</string>
+    <string name="homework_notcomplete">待完成</string>
+    <string name="people_submitted">人已提交</string>
+    <string name="expired">已過期</string>
+    <string name="nofity_sucuess">通知成功</string>
+    <string name="review_homework">查功課</string>
+    <string name="pub_homework">佈置功課</string>
+    <string name="home">首頁</string>
+
+    <string name="login_title">歡迎來到%s網校!</string>
+    <string name="login_title2">登錄您的賬號</string>
+    <string name="login_phonename">手機號</string>
+    <string name="login_phonecountrycode">+86</string>
+    <string name="login_et_phone_hint">手機號</string>
+    <string name="login_confirm">下一步</string>
+    <string name="login_title_ps">驗證身份</string>
+    <string name="login_title2_ps">如果手機不在身邊或者停止使用，可使用密碼驗證身份</string>
+    <string name="login_confirm_ps">發送驗證碼</string>
+    <string name="login_usepwd_ps">使用密碼</string>
+    <string name="login_userprivacyagreement">已閱讀並同意</string>
+    <string name="login_userprivacyagreement2">《用戶協議》及《隱私政策》</string>
+    <string name="login_userprivacyagreement3">同意下方協定才能繼續登入</string>
+    <string name="vcodeinput_title">輸入驗證碼</string>
+    <string name="vcodeinput_title2">驗證碼已經發送至</string>
+    <string name="vcodeinput_resend">%s秒後重新發送</string>
+    <string name="vcodeinput_resend2">沒有收到驗證碼?</string>
+    <string name="vcodeinput_resend3">重新發送</string>
+    <string name="countryarea_title">選擇國家/地區</string>
+    <string name="countryarea_currentcountryarea">當前國家/地區</string>
+    <string name="countryarea_currentcountryname">中國</string>
+    <string name="countryarea_othercountryarea">其他國家/地區</string>
+    <string name="pwdlogin_title">密碼登錄</string>
+    <string name="pwdlogin_title2">登錄您的賬號</string>
+    <string name="pwdlogin_et_pwd_hint">輸入密碼</string>
+    <string name="pwdlogin_pwd_name">密碼</string>
+    <string name="pwdlogin_forgetpwd">忘記密碼</string>
+    <string name="pwdlogin_confirm">登錄</string>
+    <string name="pwdlogin_confirming">登錄中</string>
+    <string name="pwdlogin_title2_ps">如果忘記密碼，可用短信驗證碼</string>
+    <string name="pwdlogin_useverificationcode_ps">使用短信驗證碼</string>
+    <string name="chooseidentity_title">請選擇身份</string>
+    <string name="chooseidentity_title2">選擇身份後，可以在我的頁面切換</string>
+    <string name="chooseidentity_teacher">老師</string>
+    <string name="chooseidentity_student">學生</string>
+    <string name="chooseidentity_confirm">確認</string>
+    <string name="forgetpwd_title">忘記密碼</string>
+    <string name="forgetpwd_title2">使用手機驗證</string>
+    <string name="setnewpassword_title">設置新密碼</string>
+    <string name="setnewpassword_title2">密碼為 8-20位 數字、字母組成</string>
+    <string name="setnewpassword_pwd">密碼</string>
+    <string name="setnewpassword_pwd_confirm">確認密碼</string>
+    <string name="setnewpassword_pwd_confirm_hint">輸入密碼</string>
+    <string name="setnewpassword_title_ps">修改密碼</string>
+    <string name="personalsettings_title">個人設置</string>
+    <string name="personalsettings_changemobile">更換手機</string>
+    <string name="personalsettings_changepassword">修改密碼</string>
+    <string name="personalsettings_language">語言</string>
+    <string name="personalsettings_languagetype">跟隨系統</string>
+    <string name="personalsettings_eyeprotection">護眼模式</string>
+    <string name="personalsettings_useragreement">用戶協議</string>
+    <string name="personalsettings_privacypolicy">隱私政策</string>
+    <string name="personalsettings_version">版本號</string>
+    <string name="personalsettings_versionpromp">最新版本</string>
+    <string name="personalsettings_versionpromp_canbeupdated">有新版本</string>
+    <string name="personalsettings_dropout">退出</string>
+    <string name="changemobile_title">更換手機號</string>
+    <string name="changemobile_phonename">新手機號</string>
+    <string name="changemobile_confirm">下一步</string>
+    <string name="languageswitch_title">切換語言</string>
+    <string name="useragreement_title">用戶協議</string>
+    <string name="calendarcourse_month_year">April 2021</string>
+    <string name="calendarcourse_backtotoday">回到今天</string>
+    <string name="logout_title">溫馨提示</string>
+    <string name="logout_content">確認要退出麼?</string>
+    <string name="logout_no">取消</string>
+    <string name="logout_yes">確認</string>
+    <string name="languageswitch_namedescription">系統</string>
+    <string name="language_name_default">跟隨系統</string>
+    <string name="language_name_zh_cn">簡體中文</string>
+    <string name="language_name_zh_tw">繁體中文</string>
+    <string name="language_name_en">英文</string>
+    <string name="updateapp_title">升級提示</string>
+    <string name="updateapp_conten">準備開始更新應用%s，確認升級？</string>
+    <string name="audiorecord_ready_start">點擊錄音</string>
+    <string name="audiorecord_ready_end">點擊結束錄音</string>
+    <string name="audiorecord_ready_again">重新錄音</string>
+    <string name="audiorecord_myaudio">我的錄音</string>
+    <string name="audiorecord_carryout">完成</string>
+    <string name="audiorecord_title">保存錄音檔案</string>
+    <string name="audiorecord_content">錄音檔案已生成，確定保存嗎？</string>
+    <string name="homeworkcomment_title">工作點評</string>
+    <string name="homeworkcomment_gotoreview">點評</string>
+    <string name="homeworkcomment_reviewed">已點評</string>
+    <string name="homeworkcomment_comment_title">%s的工作點評</string>
+    <string name="homeworkcomment_comment_description_excellent">優秀+3</string>
+    <string name="homeworkcomment_comment_description_good">良好+2</string>
+    <string name="homeworkcomment_comment_description_medium">中等+1</string>
+    <string name="homeworkcomment_comment_description_failed">不及格</string>
+    <string name="homeworkcomment_comment_content_hint">請輸入評語</string>
+    <string name="homeworkcomment_comment_shortcut">保存為常用評語</string>
+    <string name="homeworkcomment_comment_selecte_hide">确定</string>
+    <string name="homeworkcomment_student_homework">學生功課</string>
+    <string name="accountlogin_title">賬號登錄</string>
+    <string name="accountlogin_title2">請登錄賬號進入網校</string>
+    <string name="accountlogin_name">賬號</string>
+    <string name="accountlogin_et_account_hint">輸入賬號</string>
+    <string name="login_useaccount">使用賬號登錄</string>
+    <string name="login_usepwd">使用密碼登錄</string>
+    <string name="pwdlogin_useverificationcode">使用驗證碼登錄</string>
+    <string name="networkdisk_title">企業網盤</string>
+    <string name="networkdisk_et_search_hint">蒐索</string>
+    <string name="networkdisk_morequantity">最多只能選擇%s個網盤資源</string>
+    <string name="networkdisk_confirm">确定 (%s/%s)</string>
+    <string name="networkdisk_historyrecord_title_name">蒐索記錄</string>
+    <string name="versionupdate_title">發現新版本</string>
+    <string name="versionupdate_updateimmediately">立即更新</string>
+    <string name="versionupdate_content">%s APP新版本來啦！\n進一步優化了使用體驗，提升APP性能！</string>
+    <string name="homeworklist_delete_work">刪除作業%s?</string>
+    <string name="homeworkcomment_delete">確定刪除作業評語嗎？</string>
+    <string name="networkdisk_file_status">排隊中</string>
+    <string name="networkdisk_file_status2">轉換失敗</string>
+    <string name="networkdisk_file_status3">轉換中</string>
+
+
+    <!-- 错误提示 -->
+    <string name="login_failed">登錄失敗</string>
+    <string name="phone_regex_error">手機格式不正確</string>
+    <string name="phone_is_same">新手機號不能與原手機號相同</string>
+    <string name="setnewpassword_pwd_error">新密碼不能為空</string>
+    <string name="setnewpassword_pwd_confirm_error">確認密碼不能為空</string>
+    <string name="setnewpassword_pwd_different_error">新密碼和確認密碼必須相同</string>
+    <string name="setnewpassword_pwd_is_8_digits">請輸入至少8位密碼</string>
+    <string name="phone_unregistered">手機號沒有註冊</string>
+    <string name="updateapp_failure">更新失敗</string>
+    <string name="download_progress">下載進度:</string>
+    <string name="token_is_error">token已過期，請重新登錄使用!</string>
+    <string name="Verification_code_sended">驗證碼已發送，請%s秒重試</string>
+    <string name="phone_does_not_exist">手機號尚未註冊</string>
+    <string name="phone_does_exist">手機號已經註冊</string>
+    <string name="eyeprotection_content">開啟護眼模式需要設置中打開懸浮框權限，請前往設置中開啟</string>
+    <string name="eyeprotection_yes">立即設置</string>
+    <string name="phone_version_is_low">您手機版本比較低，暫時不能使用該功能</string>
+    <string name="lack_of_write_access">你的手機缺少寫入權限，請開啟後再錄製</string>
+    <string name="lack_of_recorded_audio">你的手機缺少錄製音頻權限，請開啟後再錄製</string>
+    <string name="audio_play_fail">播放失敗</string>
+    <string name="audio_num_max">語音文件最多3條，請刪後再錄製</string>
+    <string name="emptydata_text">暫無數據</string>
+    <string name="data_wrong">數據錯誤</string>
+
+    <!-- 周文字 -->
+    <string-array name="weekarray">
+        <item>日</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </string-array>
+    <!-- 月文字 -->
+    <string-array name="montharray">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+
+    <!-- 意见反馈 -->
+    <string name="feedback_title">意見箱</string>
+    <string name="feedback_label_title">功能异常</string>
+    <string name="feedback_label1">功能异常</string>
+    <string name="feedback_label2">體驗問題</string>
+    <string name="feedback_label3">功能建議</string>
+    <string name="feedback_label4">其他</string>
+    <string name="feedback_img_question">問題圖片（選填）</string>
+    <string name="feedback_hint_text">請輸入意見內容（必填）</string>
+    <string name="feedback_submit">提交</string>
+
+    <string name="buttonAlbumTitle">相册</string>
+    <string name="buttonTakePhotoTitle">拍照</string>
+    <string name="buttonCancel">取消</string>
+
+
+    <!-- 我的 -->
+    <string name="profilePrizeTitle">獎盃</string>
+    <string name="profileGetPrizeTitle">獲取獎盃</string>
+    <string name="profileRedFlowerTitle">小红花</string>
+
+    <string name="profileMenuCourses">我的課程</string>
+    <string name="profileMenuIdentity">切換身份</string>
+    <string name="teacher_title">老師</string>
+    <string name="student_title">學生</string>
+
+    <!-- 编辑资料 -->
+    <string name="editProfile">編輯資料</string>
+    <string name="name">姓名</string>
+    <string name="save">保存</string>
+    <string name="edit_name_empty_desc">姓名不能為空，請輸入姓名再次提交</string>
+
+    <!-- Loading弹窗 -->
+    <string name="loading">請稍侯</string>
+    <string name="submitSuccess">提交成功</string>
+    <string name="submitFail">提交失敗</string>
+    <string name="back">返回</string>
+    <string name="feedbackConfirmMsg">謝謝您寶貴的意見，我們會繼續努力</string>
+
+    <!-- 录制件生成中 -->
+    <string name="join_playback_room_desc">錄製件生成中，稍後再試～</string>
+    <string name="join_playback_list_title">重播清單</string>
+
+    <!-- 作业详情 发作业 -->
+    <string name="hw_hint_title">工作標題</string>
+    <string name="hw_hint_content">請輸入工作要求（限200字）</string>
+    <string name="hw_hint_s_content">請輸入內容（限200字）</string>
+    <string name="hw_camera">拍照</string>
+    <string name="hw_video">視頻</string>
+    <string name="hw_audio">語音</string>
+    <string name="hw_file">網盤</string>
+    <string name="hw_drive">網盤</string>
+    <string name="hw_submit_way">提交管道</string>
+    <string-array name="hw_submit_way_arr">
+        <item>不限制</item>
+        <item>圖片</item>
+        <item>視頻</item>
+        <item>錄音</item>
+    </string-array>
+    <string name="hw_submit_desc">要求：圖片最多9張；視頻最多3個每個時長最大5分鐘；音訊最多3個每個時長最大10分鐘；檔案最多3個，支持word、ppt、pdf</string>
+    <string name="hw_save_draft">存草稿</string>
+    <string name="hw_attachment">附件(%1$s)</string>
+    <string name="hw_fold">收起</string>
+    <string name="hw_unfold">展開</string>
+    <string name="hw_audio_limit">音訊最多3個</string>
+    <string name="hw_img_limit">圖片最多9張</string>
+    <string name="hw_video_limit">視頻最多3個</string>
+    <string name="hw_must_desc">請輸入工作要求或內容</string>
+
+    <string name="hw_rollback_edit">撤回並編輯</string>
+
+    <!-- 相机选择弹窗 -->
+    <string-array name="hw_camera_arr">
+        <item>相册</item>
+        <item>拍照</item>
+    </string-array>
+    <string-array name="hw_video_arr">
+        <item>相册</item>
+        <item>錄影</item>
+    </string-array>
+
+    <!-- 学生写作业作业详情 -->
+    <string name="hw_details">工作詳情</string>
+    <string name="hw_write">寫工作</string>
+    <string name="hw_feedback">老師點評</string>
+
+    <!-- 学生没有作业提示 -->
+    <string name="hw_s_nohomework_tip">老師還沒有佈置作業吆</string>
+
+    <!-- 开启通知 -->
+    <string name="notify_permission_title">檢測到通知許可權未開啟</string>
+    <string name="notify_permission_content">如果不開啟此許可權可能收不到工作相關通知～</string>
+    <string name="notify_permission_btn_open">去開啟</string>
+
+
+    <!-- 用户协议 和 隐私政策 -->
+    <string name="protocol_useragreement_url">https://doccdncf.talk-cloud.net/static/Agreement/%s/registration-user-tw.html</string>
+    <string name="protocol_userprivacypolicy_url">https://doccdncf.talk-cloud.net/static/Agreement/%s/registration-privacy-tw.html</string>
+    <string name="service_and_privacy">服務協定和隱私政策</string>
+    <string name="service_and_privacy_content">歡迎您使用%s！我們非常重視您的個人信息和隱私保護，特別提示您閱讀並充分理解《用戶協議》&#038;《隱私政策》各條款。如您同意《用戶協議》及《隱私政策》，請您點擊“同意”開始使用我們的產品和服務，我們將盡全力保護您的個人信息安全。</string>
+    <string name="service_and_privacy_content2">為了提供一鍵分享服務，我們的產品集成友盟+ U-Share SDK，友盟+SDK需要收集您的設備Mac位址、唯一設備識別碼（IMEI/android ID/IDFA/OPENUDID/GUID
+        、SIM 卡 IMSI 資訊）以及您需要分享的社交帳號公開信息，以便完成一鍵分享服務。並通過地理位置校準報表資料準確性，提供基礎反作弊服務。為了您的資訊安全，我們已與協力廠商SDK服務商進行資料安全保密約
+        定，這些公司會嚴格遵守我們的資料隱私和安全要求。除非得到您的同意，我們不會與其共用您的個人身份資訊。為便於您更好地瞭解【友盟+】採集的資料類型及用途，以及如何保護您的個人資訊，您可以登錄
+        https://www.umeng.com/policy瞭解【友盟+】隱私權政策。</string>
+    <string name="service_and_privacy_content3">您需要同意《服務協定》&amp;《隱私協議》才能繼續使用我們的App哦～</string>
+    <string name="service_and_privacy_agree">同意</string>
+    <string name="service_and_privacy_agree2">去同意</string>
+    <string name="service_and_privacy_disagree">不同意</string>
+    <string name="service_and_privacy_disagree2">退出</string>
+
+    <string name="loginplus_phone_login">手機號登錄</string>
+    <string name="lesson_preparation">備課</string>
+    <string name="lesson_preview">預習</string>
+    <string name="lesson_preview_preparation_no_data">還沒上傳%s內容吆～</string>
+    <string name="noticeinapp_title">通知</string>
+    <string name="noticeinapp_createtime_rule6">%s年%s月%s日</string>
+    <string name="noticeinapp_createtime_rule5">%s月%s日</string>
+    <string name="noticeinapp_createtime_rule4_1">昨天%s时%s分</string>
+    <!--    <string name="noticeinapp_createtime_rule4_2">前天%s时%s分</string>-->
+    <string name="noticeinapp_createtime_rule3">今天%s點%s分</string>
+    <string name="noticeinapp_createtime_rule2">%s分鐘前</string>
+    <string name="noticeinapp_createtime_rule1">剛剛</string>
+    <string name="student_age">歲</string>
+    <string name="no_data">暫無數據</string>
+    <string name="student_list_remind">提醒</string>
+    <string name="student_list_reminded">已提醒</string>
+    <string name="networkdisk_pics_selected_max">最多只能選擇%s張圖片</string>
+    <string name="networkdisk_videos_selected_max">最多只能選擇%s個視頻</string>
+    <string name="networkdisk_audios_selected_max">最多只能選擇%s個音訊</string>
+    <string name="networkdisk_files_selected_max">最多只能選擇%s個檔案類型</string>
+
+
+    <!-- 分享相关 -->
+    <string name="share_wx_title">微信</string>
+    <string name="share_dd_title">釘釘</string>
+    <string name="share_download_title">下載</string>
+    <string name="share_downloading">下載中...</string>
+    <string name="share_open_title">打開</string>
+    <string name="share_print_title">列印</string>
+    <string name="share_text">分享</string>
+    <string name="share_enclosure_text">附件</string>
+    <string name="share_desc_text">點擊這裡查看附件內容</string>
+    <string name="share_save_desc_text">無法獲取存儲許可權，請到設定中去開啟</string>
+    <string name="share_install_desc">您還沒有安裝%s，請安裝後重試</string>
+
+    <!-- 文件大小 -->
+    <string name="file_size_txt">文件大小: %s</string>
+
+    <string name="select_student_title">選擇學生</string>
+    <string name="select_student_all">全選</string>
+
+    <!-- 注销账号 -->
+    <string name="unregister">註銷帳號</string>
+    <string name="unregister_title">確定要註銷麼</string>
+    <string name="unregister_yes">確定</string>
+    <string name="unregister_no">暫不</string>
+    <string name="unregister_result">賬號註銷風險</string>
+    <string name="unregister_result1">無法登錄</string>
+    <string name="unregister_result2">一旦註銷，你將無法使用該賬號登錄門課網校相關服務平台。</string>
+    <string name="unregister_result3">信息抹除，無法恢復</string>
+    <string name="unregister_result4">註銷後將永久抹除門課網校相關平台的所有信息，包括但不限於個人資料、消息記錄、賬號下的課程、上課記錄、回放信息等。</string>
+    <string name="unregister_result5">撥打 %s 聯繫客服註銷</string>
+
+    <string name="unregister_pad_desc">請使用手機撥打%s, 聯繫客服</string>
+</resources>

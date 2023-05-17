@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dimen_20x"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是海贼王"
+            android:gravity="center"
+            android:textColor="@color/appblack"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="@dimen/dimen_16x" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我叫路飞"
+            android:gravity="center"
+            android:textColor="@color/appblack"
+            android:textSize="@dimen/dimen_16x" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_pics"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/ll_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/dimen_120x"
+            android:visibility="visible"
+            android:src="@mipmap/login_left_bg"
+            android:layout_height="@dimen/dimen_120x" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dimen_30x"
+            android:layout_alignRight="@+id/iv_icon"
+            app:layout_constraintTop_toTopOf="@+id/iv_icon"
+            app:layout_constraintRight_toRightOf="@+id/iv_icon"
+            android:src="@mipmap/countryarea_close"
+            android:layout_height="@dimen/dimen_30x" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.talkcloud.networkshcool.baselibrary.weiget.TKHeaderBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="@string/feedback_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp">
+
+            <TextView
+                android:layout_width="181dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/feedback_label_title"
+                android:textColor="@color/text_main_black_color"
+                android:textSize="20dp" />
+
+
+            <com.talkcloud.networkshcool.baselibrary.weiget.FlowRadioGroup
+                android:id="@+id/mFbRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/mFbRadioBtn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_feedback_label"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/feedback_label1"
+                    android:textColor="@color/text_color_feedback_label"
+                    android:textSize="13dp" />
+
+                <RadioButton
+                    android:id="@+id/mFbRadioBtn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_feedback_label"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/feedback_label2"
+                    android:textColor="@color/text_color_feedback_label"
+                    android:textSize="13dp" />
+
+                <RadioButton
+                    android:id="@+id/mFbRadioBtn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_feedback_label"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/feedback_label3"
+                    android:textColor="@color/text_color_feedback_label"
+                    android:textSize="13dp" />
+
+                <RadioButton
+                    android:id="@+id/mFbRadioBtn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_feedback_label"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/feedback_label4"
+                    android:textColor="@color/text_color_feedback_label"
+                    android:textSize="13dp" />
+
+            </com.talkcloud.networkshcool.baselibrary.weiget.FlowRadioGroup>
+
+            <EditText
+                android:id="@+id/mFbContentEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_feedback_input"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="top"
+                android:hint="@string/feedback_hint_text"
+                android:imeOptions="actionDone"
+                android:maxLines="10"
+                android:minLines="2"
+                android:paddingStart="20dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="16dp"
+                android:textColor="@color/text_main_black_color"
+                android:textCursorDrawable="@drawable/edit_cursor_color"
+                android:textSize="15dp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/feedback_img_question"
+                android:textColor="@color/text_main_black_color"
+                android:textSize="20dp" />
+
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/mFbImageContainerFbl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/mFbImageQuestionRl"
+                    android:layout_width="102dp"
+                    android:layout_height="136dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_feedback_input">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/icon_add_bigimg" />
+                </RelativeLayout>
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <com.talkcloud.networkshcool.baselibrary.weiget.TKCustomColorButton
+                android:id="@+id/mFbSubmitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="30dp"
+                app:ccbText="@string/feedback_submit" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

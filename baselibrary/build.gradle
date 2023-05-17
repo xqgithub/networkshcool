@@ -1,0 +1,172 @@
+/**
+ * 基础module，放置所有基础工具类
+ */
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+def cfg = rootProject.ext.android
+def _dependencies = rootProject.ext.dependencies
+
+
+android {
+    compileSdkVersion cfg.compileSdkVersion
+    buildToolsVersion cfg.buildToolsVersion
+
+    defaultConfig {
+//        applicationId "com.talkcloud.networkshcool.baselibrary"
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // 目前gateway home是同一个 可能不同 后期在添加
+    //公网环境
+//    def API_RELEASE_HOST = "https://console-api.talk-cloud.net/"
+    def API_RELEASE_HOST = "https://api.51menke.com/"
+    //预发环境
+    def API_PRE_HOST = "https://testingapi.51menke.com/"
+    //测试环境
+    def API_TEST_HOST = "https://demoapi.51menke.com/"
+
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "gatewayServer", "\"${API_TEST_HOST}\"")
+            buildConfigField("String", "homeServer", "\"${API_TEST_HOST}\"")
+            buildConfigField("String", "host", "\"demo\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        demo {
+            buildConfigField("String", "gatewayServer", "\"${API_TEST_HOST}\"")//demo
+            buildConfigField("String", "homeServer", "\"${API_TEST_HOST}\"")
+            buildConfigField("String", "host", "\"demo\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        pre {
+            buildConfigField("String", "gatewayServer", "\"${API_PRE_HOST}\"")//testing
+            buildConfigField("String", "homeServer", "\"${API_PRE_HOST}\"")
+            buildConfigField("String", "host", "\"testing\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            buildConfigField("String", "gatewayServer", "\"${API_RELEASE_HOST}\"")//global
+            buildConfigField("String", "homeServer", "\"${API_RELEASE_HOST}\"")
+            buildConfigField("String", "host", "\"release\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api "org.jetbrains.anko:anko:$anko_version"
+    api _dependencies.appcompat
+    api _dependencies.core_ktx
+    /** 约束布局 **/
+    api _dependencies.constraintlayout
+    /** 为方法数超过 64K 的应用启用 MultiDex **/
+    api _dependencies.multidex_version
+    /** Rxjava2+retrofit2+okhttp3 **/
+    api _dependencies.rxandroid2
+    api _dependencies.rxjava2
+    api _dependencies.retrofit
+    api _dependencies.converter_gson
+    api _dependencies.adapter_rxjava2
+    api _dependencies.okhttp3
+    api _dependencies.logging_interceptor
+    /** stetho 调试工具 **/
+    api _dependencies.stetho
+    api _dependencies.stethookhttp3
+    /** glide **/
+    api _dependencies.glide
+    kapt _dependencies.glide_compiler
+    /** eventbus3 **/
+    api _dependencies.eventbus3
+    /** recyclerview  **/
+    api _dependencies.recyclerview
+    /**协程**/
+    //依赖协程核心库
+    api _dependencies.coroutines_core
+    //依赖当前平台所对应的平台库
+    api _dependencies.coroutines_android
+    /** Rxlifecyle **/
+//    api _dependencies.rxlifecycle
+//    api _dependencies.rxlifecycle_android
+    api _dependencies.rxlifecycle_components
+    /** 自定义验证码输入框 **/
+    api _dependencies.VerificationCodeInputView
+    /** 日历控件calendarview **/
+    api _dependencies.calendarview
+    /** 屏幕适配 Autosize **/
+    api _dependencies.autosize
+    /** 滚动单项选择 **/
+//    api 'com.weigan:loopView:0.2.2'
+    api _dependencies.androidWheelView
+
+
+    implementation 'com.android.support:design:28.0.0'
+
+    implementation 'com.google.android.material:material:1.1.0'
+    //DrawableDsl
+    implementation 'com.github.forJrking:DrawableDsl:0.0.3'
+    // PictureSelector
+    implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc02'
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    // rxpermissions
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0' // 曲线图表
+
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.3'      //核心必须依赖
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30' //recycleview 适配
+
+    implementation 'com.hjq:toast:8.8'
+
+    implementation 'com.tencent:mmkv-static:1.2.4'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.3' //检测内存泄漏
+
+    // implementation 'org.raphets:roundimageview:1.2.0'
+
+    // bugly
+    implementation 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
+
+    /** 引入module **/
+    api project(':corelibrary')
+    api project(':jpushlibrary')
+    api project(':sharelibrary')
+
+
+}

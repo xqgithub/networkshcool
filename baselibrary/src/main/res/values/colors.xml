@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="appwhite">#ffffffff</color>
+    <color name="appblack">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent2">#80000000</color>
+    <color name="colorTransparent_15">#D9ffffff</color>
+    <color name="button_normal2">#a630d9c2</color>
+    <color name="update_press_bg">#e95d61</color>
+    <color name="appblue">#209bf4</color>
+    <color name="crowded_yellow">#ffc000</color>
+
+
+
+    <!--<color name="colorPrimary">#6200EE</color>
+<color name="colorPrimaryDark">#3700B3</color>
+<color name="colorAccent">#03DAC5</color>-->
+
+    <!-- 网校默认主色 -->
+    <color name="ns_color_primary">#FF1D6AFF</color>
+    <color name="ns_color_primary_dark">#801D6AFF</color>
+
+    <color name="bg_gray">#FFF7F8F9</color>
+    <color name="bg_blue">#1d6aff</color>
+
+    <color name="bg_gray_text">#8F92A1</color>
+    <color name="bg_gray_trans">#668F92A1</color>
+    <color name="bg_gray_a4c3ff">#a4c3ff</color>
+    <color name="bg_gray_92949A">#92949A</color>
+    <!-- 我的 -->
+    <color name="text_main_black_color">#FF1E1F20</color>
+    <color name="my_role_color">#FF92949A</color>
+    <color name="my_tips_color">#FF8F92A1</color>
+    <color name="divider_line_color">#338F92A1</color>
+    <color name="bg_loading_color">#FF05CBE7</color>
+    <color name="bg_loading_failed_color">#22FF2855</color>
+
+    <color name="text_course">#1E1F20</color>
+    <color name="text_next_class">#FF2855</color>
+    <color name="line_class">#338F92A1</color>
+
+
+    <color name="networkshcool_e1f20">#1E1F20</color>
+    <color name="networkshcool_8f92a1">#8F92A1</color>
+    <color name="networkshcool_668f92a1">#668F92A1</color>
+    <color name="networkshcool_338f92a1">#338F92A1</color>
+    <color name="networkshcool_222222">#222222</color>
+    <color name="networkshcool_801d6aff">#801D6AFF</color>
+    <color name="networkshcool_1d6aff">#1D6AFF</color>
+    <color name="networkshcool_b9bac5">#B9BAC5</color>
+    <color name="networkshcool_eff0f3">#EFF0F3</color>
+    <color name="networkshcool_a9e0fc">#A9E0FC</color>
+    <color name="networkshcool_9be1ab">#9be1ab</color>
+    <color name="networkshcool_f7f8f9">#f7f8f9</color>
+    <color name="networkshcool_a3a3ae">#a3a3ae</color>
+    <color name="networkshcool_c0c3c9">#c0c3c9</color>
+    <color name="networkshcool_4267b2">#4267b2</color>
+    <color name="networkshcool_47c1e4">#47c1e4</color>
+    <color name="networkshcool_ff2855">#ff2855</color>
+    <color name="networkshcool_353f56">#353f56</color>
+    <color name="full_red">#ff4545</color>
+    <color name="login_submit_bg_end">#008BE3</color>
+    <color name="login_et_password_hint">#9093A0</color>
+</resources>

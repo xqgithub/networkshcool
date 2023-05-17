@@ -1,0 +1,45 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.talkcloud.sharelibrary">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+    <queries>
+        <!-- 分享微信 钉钉 -->
+        <package android:name="com.tencent.mm" />
+        <package android:name="com.alibaba.android.rimet" />
+    </queries>
+
+    <application>
+
+        <!-- wx -->
+        <activity
+            android:name="com.talkcloud.networkshcool.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 钉钉 -->
+        <activity
+            android:name="com.talkcloud.networkshcool.ddshare.DDShareActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+       <!--<provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.talkcloud.plus.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>-->
+    </application>
+</manifest>

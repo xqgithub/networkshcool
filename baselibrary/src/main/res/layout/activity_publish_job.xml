@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".baselibrary.ui.activities.HomeworkPublishActivity">
+
+    <com.talkcloud.networkshcool.baselibrary.weiget.TKHeaderBar
+        android:id="@+id/mHeaderBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftSrc="@mipmap/countryarea_close"
+        app:rightText="@string/hw_save_draft" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.talkcloud.networkshcool.baselibrary.weiget.TKJobCommonView
+                android:id="@+id/mJobCommonView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/mJobSubmitTypeLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/hw_submit_way"
+                    android:textColor="@color/text_main_black_color"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:id="@+id/mJobSubmitTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="right"
+                    android:textColor="@color/my_tips_color"
+                    android:textSize="15dp"
+                    tools:text="不限制" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/icon_right_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mJobSelectStudentLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="选择学生"
+                    android:textColor="@color/text_main_black_color"
+                    android:textSize="16dp" />
+
+
+                <TextView
+                    android:id="@+id/mJobSelectStudentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="right"
+                    android:textColor="@color/my_tips_color"
+                    android:textSize="15dp"
+                    tools:text="金茜、Etta Ramos等5人" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/icon_right_arrow" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/hw_submit_desc"
+                android:textColor="@color/my_tips_color"
+                android:textSize="12sp" />
+
+            <com.talkcloud.networkshcool.baselibrary.weiget.TKCustomColorButton
+                android:id="@+id/mJobSubmitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                app:ccbText="@string/publish" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

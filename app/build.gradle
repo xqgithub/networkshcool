@@ -1,0 +1,275 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+
+def cfg = rootProject.ext.android
+
+android {
+    compileSdkVersion cfg.compileSdkVersion
+    buildToolsVersion cfg.buildToolsVersion
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.talkcloud.networkshcool"
+        minSdkVersion cfg.minSdkVersion
+        targetSdkVersion cfg.targetSdkVersion
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        flavorDimensions "versionCode"
+
+/*        //极光推送
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "com.talkcloud.networkshcool",
+                JPUSH_APPKEY  : "efe1fee9486a15e2cc89d289", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+
+                //xiaomi_config_start
+                XIAOMI_APPID  : "MI-小米的APPID",
+                XIAOMI_APPKEY : "MI-小米的APPKEY",
+                //xiaomi_config_end
+                //oppo_config_start
+                OPPO_APPKEY   : "OP-oppo的APPKEY",
+                OPPO_APPID    : "OP-oppo的APPID",
+                OPPO_APPSECRET: "OP-oppo的APPSECRET",
+                //oppo_config_end
+                //vivo_config_start
+                VIVO_APPKEY   : "vivo的APPKEY",
+                VIVO_APPID    : "vivo的APPID",
+                //vivo_config_end
+        ]*/
+
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'talk'
+            keyPassword 'talkplus'
+            storeFile file('../talkplus.jks')
+            storePassword 'talkplus'
+        }
+    }
+
+    productFlavors {
+
+        // 标准通用
+        normal {
+            applicationId "com.talkcloud.networkshcool"
+            versionName cfg.versionName
+            versionCode cfg.versionCode
+
+            buildConfigField "String", "company_id", '""'
+            buildConfigField "String", "company_domain", '"www"'
+
+            buildConfigField "String", "home_ext_url", '""'
+//            buildConfigField "boolean", "is_show_home_ext_btn", "false"
+
+            buildConfigField "String", "user_agreement_ext_url", '"menke"'
+
+
+            // app_logo
+            manifestPlaceholders = [
+                    app_logo        : "@mipmap/ic_launcher",
+                    app_name        : "@string/app_name",
+                    start_logo      : "@mipmap/start_logo",
+                    app_scheme      : "menke",
+                    JPUSH_APPKEY    : "b859237de554b67e71fdf5ac", //JPush上注册的包名对应的appkey. efe1fee9486a15e2cc89d289  b859237de554b67e71fdf5ac
+                    JPUSH_CHANNEL   : "developer-default",
+                    HUAWEI_HMS_APPID: "104384601",
+                    HUAWEI_HMS_CPID : "890086000300399144",
+                    XIAOMI_APPKEY   : "MI-5131995595542",
+                    XIAOMI_APPID    : "MI-2882303761519955542",
+            ]
+
+        }
+
+        //艺口才
+        yikoucai {
+            applicationId "com.talkcloud.yikoucai"
+            versionName cfg.versionName
+            versionCode cfg.versionCode
+
+            //企业id,指定企业
+            buildConfigField "String", "company_id", '"1001365"'
+            buildConfigField "String", "company_domain", '"yikoucai"'
+
+            buildConfigField "String", "home_ext_url", '"https://www.baidu.com"'
+//            buildConfigField "boolean", "is_show_home_ext_btn", "true"
+
+            buildConfigField "String", "user_agreement_ext_url", '"https://www.baidu.com"'
+
+            manifestPlaceholders = [
+                    app_logo        : "@mipmap/ic_launcher",
+                    app_name        : "@string/app_name",
+                    start_logo      : "@mipmap/start_logo",
+                    app_scheme      : "yikoucai",
+                    JPUSH_APPKEY    : "", //JPush上注册的包名对应的appkey.
+                    JPUSH_CHANNEL   : "developer-default",
+                    HUAWEI_HMS_APPID: "104384601",
+                    HUAWEI_HMS_CPID : "890086000300399144",
+                    XIAOMI_APPKEY   : "MI-5131995595542",
+                    XIAOMI_APPID    : "MI-2882303761519955542",
+            ]
+        }
+
+        //17talki
+        talki {
+            applicationId "com.talkcloud.talki"
+            versionName cfg.versionName + ".118224"
+            versionCode cfg.versionCode
+
+            buildConfigField "String", "company_id", '"118224"'//   118238（测试）
+            buildConfigField "String", "company_domain", '"fke9nhm3"'
+
+            buildConfigField "String", "home_ext_url", '""'
+            buildConfigField "String", "user_agreement_ext_url", '"17talki"'
+//            buildConfigField "boolean", "is_show_home_ext_btn", "true"
+            manifestPlaceholders = [
+                    app_logo        : "@mipmap/ic_launcher",
+                    app_name        : "@string/app_name",
+                    start_logo      : "@mipmap/start_logo",
+                    app_scheme      : "talki",
+                    JPUSH_APPKEY    : "b21a8beffb163ac4b108e706", //JPush上注册的包名对应的appkey.
+                    JPUSH_CHANNEL   : "developer-default",
+                    HUAWEI_HMS_APPID: "104384601",
+                    HUAWEI_HMS_CPID : "890086000300399144",
+                    XIAOMI_APPKEY   : "MI-5131995595542",
+                    XIAOMI_APPID    : "MI-2882303761519955542",
+            ]
+        }
+
+        //通技
+        tongji {
+            applicationId "com.talkcloud.tongji"
+            versionName cfg.versionName + ".116748"
+            versionCode cfg.versionCode
+
+            buildConfigField "String", "company_id", '"116748"' // 10045730（测试）
+            buildConfigField "String", "company_domain", '"8613912256452"'
+
+            buildConfigField "String", "home_ext_url", '""'
+//            buildConfigField "boolean", "is_show_home_ext_btn", "false"
+            buildConfigField "String", "user_agreement_ext_url", '"tongji"'
+
+            manifestPlaceholders = [
+                    app_logo        : "@mipmap/ic_launcher",
+                    app_name        : "@string/app_name",
+                    start_logo      : "@mipmap/start_logo",
+                    app_scheme      : "tongji",
+                    JPUSH_APPKEY    : "dd99dfaf3eaa57560afebcc2", //JPush上注册的包名对应的appkey.
+                    JPUSH_CHANNEL   : "developer-default",
+                    HUAWEI_HMS_APPID: "104384601",
+                    HUAWEI_HMS_CPID : "890086000300399144",
+                    XIAOMI_APPKEY   : "MI-5131995595542",
+                    XIAOMI_APPID    : "MI-2882303761519955542",
+            ]
+        }
+    }
+
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/java']
+        }
+
+        yikoucai.res.srcDirs = ['src/yikoucai/res']
+        talki.res.srcDirs = ['src/talki/res']
+        tongji.res.srcDirs = ['src/tongji/res']
+
+    }
+
+    def curTime = new Date()
+    def timeStr = curTime.format('MMddHHmm')
+    buildTypes {
+
+        debug {
+            shrinkResources false
+            minifyEnabled false   //混淆
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+//            manifestPlaceholders = [
+////                    JPUSH_APPKEY : "efe1fee9486a15e2cc89d289", //JPush上注册的包名对应的appkey.
+//                    JPUSH_CHANNEL: "developer-default",
+//            ]
+        }
+
+        demo {
+            shrinkResources false
+            minifyEnabled false   //混淆
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+//            manifestPlaceholders = [
+////                    JPUSH_APPKEY : "efe1fee9486a15e2cc89d289", //JPush上注册的包名对应的appkey.
+//                    JPUSH_CHANNEL: "developer-default",
+//            ]
+        }
+        pre {//预发布打包
+            minifyEnabled false
+            minifyEnabled false   //混淆
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+//            manifestPlaceholders = [
+////                    JPUSH_APPKEY : "efe1fee9486a15e2cc89d289", //JPush上注册的包名对应的appkey.
+//                    JPUSH_CHANNEL: "developer-default",
+//            ]
+        }
+
+        release {
+            shrinkResources false
+            minifyEnabled false   //混淆
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+//            manifestPlaceholders = [
+////                    JPUSH_APPKEY : "b859237de554b67e71fdf5ac", //JPush上注册的包名对应的appkey.
+//                    JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+//            ]
+
+        }
+
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                if (variant.buildType.name.equals('demo')) {
+                    outputFileName = "Demo-${variant.productFlavors[0].name}--V${defaultConfig.versionName}-${timeStr}.apk"
+                }
+                if (variant.buildType.name.equals('pre')) {
+                    outputFileName = "Testing-${variant.productFlavors[0].name}--V${defaultConfig.versionName}-${timeStr}.apk"
+                }
+                if (variant.buildType.name.equals('release')) {
+                    outputFileName = "Global-${variant.productFlavors[0].name}-V${defaultConfig.versionName}-${timeStr}.apk"
+                }
+
+            }
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    /** 引入module **/
+    implementation project(':baselibrary')
+    // implementation project(path:':jpushlibrary', configuration: 'default')
+}

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_global"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appwhite"
+    tools:ignore="MissingDefaultResource,RtlCompat">
+
+    <ImageView
+        android:id="@+id/iv_left_bg"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="h,16:9"
+        android:src="@mipmap/login_left_bg"
+        android:layout_height="match_parent" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_title"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_left_bg"
+        android:textColor="@color/networkshcool_e1f20"
+        android:textSize="32dp"
+        android:text="@string/login_title"
+        android:layout_height="wrap_content" />
+
+    <!-- 手机登录和账号登录 切换 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_tabswitch"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/tv_phone_login"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_account_login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/loginplus_phone_login"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:textColor="@color/networkshcool_e1f20" />
+
+        <TextView
+            android:id="@+id/tv_account_login"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@+id/tv_phone_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_phone_login"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_phone_login"
+            android:layout_marginEnd="4dp"
+            android:text="@string/accountlogin_title"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:textColor="@color/networkshcool_e1f20" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tv_phonename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/cl_tabswitch"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/networkshcool_e1f20"
+        android:textSize="16dp"
+        android:text="@string/login_phonename" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_phonenum"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phonename"
+        android:background="@drawable/nws_fillet_stroke_12_8f92a1"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title"
+        android:layout_height="54dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_phonecountrycode"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_phone"
+                android:layout_width="@dimen/dimen_24x"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="@dimen/dimen_10x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@mipmap/login_phone"
+                android:layout_height="@dimen/dimen_24x" />
+
+            <TextView
+                android:id="@+id/tv_phonecountrycode"
+                app:layout_constraintStart_toEndOf="@+id/iv_phone"
+                android:layout_width="wrap_content"
+                android:textColor="@color/networkshcool_222222"
+                android:textSize="17dp"
+                android:layout_marginStart="2dp"
+                android:text="@string/login_phonecountrycode"
+                app:layout_constraintTop_toTopOf="@+id/iv_phone"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_phone"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_arrowdown"
+                android:layout_width="@dimen/dimen_10x"
+                app:layout_constraintTop_toTopOf="@+id/tv_phonecountrycode"
+                app:layout_constraintStart_toEndOf="@+id/tv_phonecountrycode"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_phonecountrycode"
+                android:src="@mipmap/login_arrowdown"
+                android:layout_marginStart="@dimen/dimen_3x"
+                android:layout_height="@dimen/dimen_10x" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.talkcloud.networkshcool.baselibrary.weiget.EditTextCustomize
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:background="@null"
+            android:paddingEnd="10dp"
+            android:hint="@string/login_et_phone_hint"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:text=""
+            android:imeOptions="actionNext"
+            android:textColor="@color/networkshcool_222222"
+            android:textColorHint="@color/networkshcool_8f92a1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/cl_phonecountrycode" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_pwd"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:textColor="@color/networkshcool_e1f20"
+        android:textSize="16dp"
+        android:text="@string/pwdlogin_pwd_name"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_phonenum"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_pwd"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pwd"
+        android:background="@drawable/nws_fillet_stroke_12_8f92a1"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title"
+        android:layout_height="54dp">
+
+        <ImageView
+            android:id="@+id/iv_pwd"
+            android:layout_width="@dimen/dimen_24x"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="@dimen/dimen_10x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@mipmap/pwdlogin_pwd"
+            android:layout_height="@dimen/dimen_24x" />
+
+        <com.talkcloud.networkshcool.baselibrary.weiget.EditTextCustomize
+            android:id="@+id/et_pwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:background="@null"
+            android:paddingEnd="10dp"
+            android:textCursorDrawable="@drawable/edit_cursor_color"
+            android:hint="@string/pwdlogin_et_pwd_hint"
+            android:inputType="text"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/networkshcool_222222"
+            android:textColorHint="@color/networkshcool_8f92a1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@+id/iv_pwd" />
+
+
+        <ImageView
+            android:id="@+id/iv_pwd_status"
+            android:layout_width="@dimen/dimen_34x"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="@dimen/dimen_5x"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="@dimen/dimen_20x"
+            android:src="@mipmap/pwdlogin_invisible"
+            android:layout_height="@dimen/dimen_34x" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        android:layout_marginTop="@dimen/dimen_40x"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title"
+        android:layout_width="0dp"
+        android:textColor="@color/appwhite"
+        android:textSize="18dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/cl_pwd"
+        android:layout_height="54dp" />
+
+
+    <TextView
+        android:id="@+id/tv_confirm_content_show"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/tv_confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_confirm"
+        app:layout_constraintStart_toStartOf="@+id/tv_confirm"
+        app:layout_constraintEnd_toEndOf="@+id/tv_confirm"
+        android:gravity="center"
+        android:textColor="@color/appwhite"
+        android:textSize="18dp"
+        android:text="@string/login_confirm" />
+
+
+    <ImageView
+        android:id="@+id/iv_loading"
+        android:layout_width="@dimen/dimen_16x"
+        android:layout_height="@dimen/dimen_16x"
+        app:layout_constraintTop_toTopOf="@+id/tv_confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_confirm"
+        app:layout_constraintEnd_toStartOf="@+id/tv_confirm_content_show"
+        android:layout_marginEnd="20dp"
+        android:src="@mipmap/pwdlogin_loading"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/tv_useverificationcode"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_54x"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirm"
+        app:layout_constraintStart_toStartOf="@+id/tv_confirm"
+        android:layout_marginTop="23dp"
+        android:textColor="#cc1e1f20"
+        android:textSize="14dp"
+        android:text="@string/pwdlogin_useverificationcode"
+        android:gravity="center" />
+
+
+    <TextView
+        android:id="@+id/tv_forgetpwd"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirm"
+        app:layout_constraintEnd_toEndOf="@+id/tv_confirm"
+        android:layout_marginTop="23dp"
+        android:gravity="center"
+        android:textColor="@color/networkshcool_1d6aff"
+        android:textSize="14dp"
+        android:text="@string/pwdlogin_forgetpwd" />
+
+
+    <TextView
+        android:id="@+id/tv_usepwd"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_54x"
+        android:layout_marginTop="23dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirm"
+        app:layout_constraintStart_toStartOf="@+id/tv_confirm"
+        app:layout_constraintEnd_toEndOf="@+id/tv_confirm"
+        android:textColor="#cc1e1f20"
+        android:textSize="14dp"
+        android:text="@string/pwdlogin_title"
+        android:gravity="center" />
+
+    <!-- 用户协议和隐私协议 -->
+    <ImageView
+        app:layout_constrainedWidth="true"
+        android:id="@+id/iv_userprivacyagreement"
+        android:layout_width="14dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="@+id/tv_userprivacyagreement"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_userprivacyagreement"
+        app:layout_constraintEnd_toStartOf="@+id/tv_userprivacyagreement"
+        android:src="@mipmap/login_userprivacyagreement_unselected"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        android:visibility="visible"
+        android:layout_marginEnd="6dp"
+        android:layout_height="14dp" />
+
+    <TextView
+        android:id="@+id/tv_userprivacyagreement"
+        app:layout_constrainedWidth="true"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/iv_userprivacyagreement"
+        app:layout_constraintEnd_toEndOf="@+id/tv_title"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:text="@string/login_userprivacyagreement"
+        android:visibility="visible"
+        android:layout_height="wrap_content" />
+
+
+    <com.talkcloud.networkshcool.baselibrary.weiget.GraphicVerificationView
+        android:id="@+id/graphicverification_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_left_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="90dp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
